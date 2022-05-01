@@ -1,0 +1,19 @@
+<div class="container-fluid mt-2">
+  <h2 class="text-center">Mantenimientos</h2>
+  <div class="row" *ngFor="let mantenimiento of mantenimientos">
+    <div class="col">
+      <div class="row">
+        <div class="col-3">
+          <p>{{mantenimiento.fechaMantenimiento}}</p>
+        </div>
+        <div class="col-9">
+          <h2>{{ mantenimiento.nombreTaller}}</h2>
+        </div>
+      </div>
+      <div class="row">
+        <p>{{mantenimiento.descripcionMantenimiento}}</p>
+      </div>
+    </div>
+    <hr />
+  </div>
+</div>
