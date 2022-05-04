@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class MantenimientoService {
 
-  private apiUrl: string = environment.baseUrl + 'mantenimientos';
+  private apiUrl: string = environment.baseUrl + '/vehiculos/1/mantenimientos';
 
   constructor(private http: HttpClient) { }
 
