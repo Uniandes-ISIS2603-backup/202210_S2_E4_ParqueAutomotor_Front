@@ -1,15 +1,13 @@
 
-<div class="container-fluid">
+<div class="container">
   <h1 class="center"> Conductores </h1>
   <div class="row">
-    <div *ngFor="let conductor of conductores" class="col mb-2">
-      <div class="card">
-        <img class="card-img-top" src="{{conductor.foto}}"
-        alt="{{ conductor.nombre }}"/>
+    <div *ngFor="let conductor of conductores" class="col mb-3" style="text-align:center">
+      <div class="card" >
+        <img class="img-responsive center-block d-block mx-auto "  src="{{conductor.foto}}" alt="{{ conductor.nombre }}"/>
         <div class="card-body">
-
-          <h5 class="card-title">{{conductor.nombre}}</h5>
-          <p class="card-text">{{conductor.identificacion}}</p>
+          <h5 class="card-title center">{{conductor.nombre}}</h5>
+          <p class="card-text center">{{conductor.identificacion}}</p>
         </div>
       </div>
     </div>
