@@ -8,6 +8,7 @@ import { EstudianteModule } from './estudiante/estudiante.module';
 import { MantenimientoModule } from './mantenimiento/mantenimiento.module';
 import { ProfesorModule } from './profesor/profesor.module';
 import { DocumentoModule } from './documento/documento.module';
+import { ConductorModule } from './conductor/conductor.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { DocumentoModule } from './documento/documento.module';
     EstudianteModule,
     ProfesorModule,
     DocumentoModule,
-    HttpClientModule
+    HttpClientModule,
+    ConductorModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

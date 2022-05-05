@@ -30,9 +30,9 @@ describe('Service: Mantenimiento', () => {
 
     component.mantenimientos = [
       new Mantenimiento(
-      faker.lorem.sentence(),
-      faker.lorem.sentence(),
-      faker.lorem.sentence()
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence()
       ),
     ];
     fixture.detectChanges();
