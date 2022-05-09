@@ -7,6 +7,7 @@ import { ConductorListComponent } from './conductor-list.component';
 import faker from '@faker-js/faker';
 import { Conductor } from '../conductor';
 import { HttpClientModule } from '@angular/common/http';
+import { AppComponent } from 'src/app/app.component';
 
 describe('ConductorListComponent', () => {
   let component: ConductorListComponent;
@@ -15,7 +16,7 @@ describe('ConductorListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ConductorListComponent],
+      declarations: [ConductorListComponent,AppComponent],
       imports: [HttpClientModule]
     })
     .compileComponents();
@@ -34,7 +35,7 @@ describe('ConductorListComponent', () => {
         faker.lorem.sentence(),
       )
     ];
-    
+
     fixture.detectChanges();
     debugElement = fixture.debugElement;
   });

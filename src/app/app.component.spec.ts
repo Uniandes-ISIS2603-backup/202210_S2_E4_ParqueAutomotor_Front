@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { ConductorListComponent } from './conductor/conductor-list/conductor-list.component';
 import { MantenimientoListComponent } from './mantenimiento/mantenimiento-list/mantenimiento-list.component';
 
 
@@ -14,7 +15,8 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        MantenimientoListComponent
+        MantenimientoListComponent,
+        ConductorListComponent
       ],
     }).compileComponents();
   });
