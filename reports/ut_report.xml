@@ -1,18 +1,21 @@
 <testExecutions version="1">
-  <file path="src/app/conductor/conductor-list/conductor-list.component.spec.ts">
-    <testCase name="ConductorListComponent should have an img element " duration="264"/>
-  </file>
-  <file path="src/app/mantenimiento/mantenimiento-list/mantenimiento-list.component.spec.ts">
-    <testCase name="MantenimientoListComponent should create" duration="78"/>
-  </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="81"/>
-    <testCase name="AppComponent should have as title 'parqueAutomotor-front'" duration="35"/>
+    <testCase name="AppComponent should create the app" duration="146"/>
+    <testCase name="AppComponent should have as title 'parqueAutomotor-front'" duration="25"/>
   </file>
-  <file path="src/app/mantenimiento/mantenimiento.service.spec.ts">
-    <testCase name="Service: Mantenimiento should create" duration="26"/>
+  <file path="src/app/conductor/conductor-list/conductor-list.component.spec.ts">
+    <testCase name="ConductorListComponent should have an img element " duration="73"/>
   </file>
   <file path="src/app/reserva/reserva-list/reserva-list.component.spec.ts">
-    <testCase name="ReservaListComponent should create" duration="17"/>
+    <testCase name="ReservaListComponent should create" duration="24"/>
+  </file>
+  <file path="src/app/reserva/reserva.service.spec.ts">
+    <testCase name="Service: Reserva should ..." duration="14"/>
+  </file>
+  <file path="src/app/mantenimiento/mantenimiento-list/mantenimiento-list.component.spec.ts">
+    <testCase name="MantenimientoListComponent should create" duration="37"/>
+  </file>
+  <file path="src/app/mantenimiento/mantenimiento.service.spec.ts">
+    <testCase name="Service: Mantenimiento should create" duration="27"/>
   </file>
 </testExecutions>

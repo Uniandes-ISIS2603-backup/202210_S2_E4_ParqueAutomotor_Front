@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { ReservaListComponent } from './reserva-list.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('ReservaListComponent', () => {
   let component: ReservaListComponent;
@@ -11,6 +12,7 @@ describe('ReservaListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports:[HttpClientTestingModule],
       declarations: [ ReservaListComponent ]
     })
     .compileComponents();

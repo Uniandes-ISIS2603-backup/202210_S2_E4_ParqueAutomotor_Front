@@ -13,13 +13,13 @@ export class ReservaListComponent implements OnInit {
   reservas: Array<Reserva> = [];
   constructor(private reservaService:ReservaService) { }
 
-  getReservas():void {
-    this.reservaService.getReservas().subscribe(reservas => {
-      this.reservas = reservas;
-    })
-  }
+  // getReservas():void {
+  //   this.reservaService.getReservas.subscribe(reservas => {
+  //     this.reservas = reservas;
+  //   })
+  // }
   ngOnInit() {
-    this.getReservas;
+    // this.getReservas;
   }
 
 }
