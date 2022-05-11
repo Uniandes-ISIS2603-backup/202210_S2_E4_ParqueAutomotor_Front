@@ -1,15 +1,17 @@
 export class Vehiculo {
 
   id: number;
+  foto: string;
   marca: string;
   placa: string;
   modelo: string;
   tipo: string;
   capacidadPasajeros: number;
 
-  constructor( id:number, marca:string, placa:string, modelo:string,
+  constructor( id:number, foto: string, marca:string, placa:string, modelo:string,
             tipo:string, capacidadPasajeros:number){
     this.id = id;
+    this.foto = foto;
     this.marca = marca;
     this.placa = placa;
     this.modelo = modelo;

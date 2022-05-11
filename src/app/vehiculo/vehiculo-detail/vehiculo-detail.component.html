@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{ vehiculoDetail.placa }}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img
+          class="img-fluid"
+          src="{{ vehiculoDetail.placa }}"
+          alt="{{ vehiculoDetail.placa }}"
+        />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt>Reservas</dt>
+        <dd class="caption" *ngFor="let reserva of vehiculoDetail.reservas">
+          {{ reserva.lugarDestino }}
+        </dd>
+
+        <dt>Mantenimientos</dt>
+        <dd class="caption" *ngFor="let mantenimiento of vehiculoDetail.mantenimientos">
+          {{ mantenimiento.fechaMantenimiento }}
+        </dd>
+
+        <dt>Modelo</dt>
+        <dd>{{ vehiculoDetail.modelo }}</dd>
+        <hr />
+        <dt>Marca</dt>
+        <dd>{{ vehiculoDetail.marca }}</dd>
+        <hr />
+        <dt class="bold">Capacidad</dt>
+        <dd class="caption">{{ vehiculoDetail.capacidadPasajeros }}</dd>
+        <hr />
+      </dl>
+    </div>
+  </div>
+</div>

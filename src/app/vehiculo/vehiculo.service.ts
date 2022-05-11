@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Vehiculo } from './vehiculo';
+import { VehiculoDetail } from './vehiculo-detail';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class VehiculoService {
 
   constructor(private http: HttpClient) { }
 
-  getVehiculos(): Observable<Vehiculo[]>{
-  return this.http.get<Vehiculo[]>(this.apiUrl);
+  getVehiculos(): Observable<VehiculoDetail[]>{
+  return this.http.get<VehiculoDetail[]>(this.apiUrl);
   }
 }

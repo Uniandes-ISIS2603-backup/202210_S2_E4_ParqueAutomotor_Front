@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Vehiculo } from '../vehiculo';
+import { VehiculoDetail } from '../vehiculo-detail';
 import { VehiculoService } from '../vehiculo.service';
 
 @Component({
@@ -9,7 +10,9 @@ import { VehiculoService } from '../vehiculo.service';
 })
 export class VehiculoListComponent implements OnInit {
 
-  vehiculos: Array<Vehiculo>=[];
+  vehiculos: Array<VehiculoDetail>=[];
+  selected: Boolean = false;
+  selectedVehiculo!: VehiculoDetail;
 
   constructor(private vehiculoService: VehiculoService) { }
 
@@ -17,6 +20,11 @@ export class VehiculoListComponent implements OnInit {
     this.vehiculoService.getVehiculos().subscribe((vehiculos) => {
       this.vehiculos = vehiculos;
     });
+  }
+
+  onSelected(vehiculo: VehiculoDetail): void {
+    this.selected = true;
+    this.selectedVehiculo = vehiculo;
   }
 
   ngOnInit() {

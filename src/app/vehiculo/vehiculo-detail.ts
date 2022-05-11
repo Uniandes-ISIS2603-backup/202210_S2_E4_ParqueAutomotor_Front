@@ -10,10 +10,10 @@ export class VehiculoDetail extends Vehiculo {
   mantenimientos: Mantenimiento[];
   documentos: Documento[];
 
-  constructor( id:number, marca:string, placa:string, modelo:string,
+  constructor( id:number, foto: string, marca:string, placa:string, modelo:string,
     tipo:string, capacidadPasajeros:number, reservas:Reserva[],
      mantenimientos:Mantenimiento[], documentos:Documento[]) {
-      super(id, marca, placa, modelo, tipo, capacidadPasajeros);
+      super(id, foto, marca, placa, modelo, tipo, capacidadPasajeros);
       this.reservas = reservas;
       this.mantenimientos = mantenimientos;
       this.documentos = documentos;
