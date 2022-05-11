@@ -1,0 +1,16 @@
+<div class="container-fluid mt-2">
+  <h1 class="text-center">Vehiculos</h1>
+  <div class="row" *ngFor="let vehiculo of vehiculos">
+    <div class="col">
+      <div class="row">
+        <div class="col-3">
+          <p>{{vehiculo.tipo  }}</p>
+        </div>
+        <div class="col-9">
+          <h4>{{ vehiculo.placa}}</h4>
+        </div>
+      </div>
+    </div>
+    <hr />
+  </div>
+</div>

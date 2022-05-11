@@ -9,6 +9,7 @@ import { MantenimientoModule } from './mantenimiento/mantenimiento.module';
 import { ProfesorModule } from './profesor/profesor.module';
 import { DocumentoModule } from './documento/documento.module';
 import { ConductorModule } from './conductor/conductor.module';
+import { VehiculoModule } from './vehiculo/vehiculo.module';
 
 @NgModule({
   declarations: [
@@ -22,8 +23,8 @@ import { ConductorModule } from './conductor/conductor.module';
     ProfesorModule,
     DocumentoModule,
     HttpClientModule,
-    ConductorModule
-    
+    ConductorModule,
+    VehiculoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
