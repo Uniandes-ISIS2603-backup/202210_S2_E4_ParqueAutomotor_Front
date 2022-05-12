@@ -14,18 +14,20 @@ export class ReservaListComponent implements OnInit {
   reservas: Array<Reserva> = [];
   constructor(private reservaService:ReservaService) { }
 
-  // getReservas():void {
-  //   this.reservaService.getReservas.subscribe(reservas => {
-  //     this.reservas = reservas;
-  //   })
-  // }
+   getReservas():void {
+     console.log("Entree a subscribir")
+     this.reservaService.getReservas().subscribe(reservas => {
+       this.reservas = reservas;
+     })
+   }
 
   onSelectedReserva(reserva:Reserva):void{
     this.selected =true;
     this.selectedReserva = reserva;
   }
   ngOnInit() {
-    // this.getReservas;
+    console.log("Entree a subscribir")
+    this.getReservas();
   }
 
 }

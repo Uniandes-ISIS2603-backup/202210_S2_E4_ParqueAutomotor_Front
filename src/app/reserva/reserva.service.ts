@@ -8,15 +8,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ReservaService {
-private apiUrl: string = environment.baseUrl + 'reservas';
+private apiUrl: string = environment.baseUrl + '/reservas';
 
 constructor(private http: HttpClient) { }
 
-<<<<<<< Updated upstream
-getBooks(): Observable<Reserva[]>{
-=======
 getReservas(): Observable<Reserva[]>{
->>>>>>> Stashed changes
   return this.http.get<Reserva[]>(this.apiUrl);
 }
 
