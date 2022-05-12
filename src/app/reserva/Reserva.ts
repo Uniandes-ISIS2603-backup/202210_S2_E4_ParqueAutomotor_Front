@@ -14,13 +14,12 @@ export class Reserva {
   descripcion: string;
 
   //Objetos
-  estudiantes: Array<Estudiante>=[];
   profesor: Profesor;
   vehiculo: Vehiculo;
   conductor: Conductor;
 
 
-constructor(id:number,activa:boolean,fechaHoraReservada: any,fechaHoraEfectuada: any,lugarDestino:string,descripcion: string,estudiantes: Array<Estudiante>,profesor: Profesor, vehiculo: Vehiculo,conductor: Conductor )
+constructor(id:number,activa:boolean,fechaHoraReservada: any,fechaHoraEfectuada: any,lugarDestino:string,descripcion: string,profesor: Profesor, vehiculo: Vehiculo,conductor: Conductor )
 {
   this.id = id;
   this.activa = activa;
@@ -28,7 +27,6 @@ constructor(id:number,activa:boolean,fechaHoraReservada: any,fechaHoraEfectuada:
   this.fechaHoraReservada = fechaHoraReservada;
   this.lugarDestino = lugarDestino;
   this.descripcion=descripcion;
-  this.estudiantes = estudiantes;
   this.profesor =  profesor;
   this.vehiculo = vehiculo;
   this.conductor = conductor;
