@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from 'src/app/app.component';
 import { ConductorDetail } from '../conductor-detail';
 import { Reserva } from 'src/app/reserva/Reserva';
+import { Profesor } from 'src/app/profesor/profesor';
+import { Vehiculo } from 'src/app/vehiculo/vehiculo';
 
 describe('ConductorListComponent', () => {
   let component: ConductorListComponent;
@@ -19,7 +21,7 @@ describe('ConductorListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ConductorListComponent,AppComponent],
-      imports: [HttpClientModule]
+        
     })
     .compileComponents();
   }));
@@ -27,7 +29,7 @@ describe('ConductorListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ConductorListComponent);
     component = fixture.componentInstance;
-    
+
     component.conductores = [
       new ConductorDetail(
         faker.datatype.number(),
@@ -41,7 +43,23 @@ describe('ConductorListComponent', () => {
           faker.datatype.datetime,
           faker.datatype.string(),
           faker.datatype.string(),
-          []
+          new Profesor(faker.datatype.number(),
+            faker.datatype.string(),
+            faker.datatype.string(),
+            faker.datatype.string(),
+            faker.image.imageUrl()),
+          new Vehiculo(faker.datatype.number(),
+            faker.image.imageUrl(),
+            faker.datatype.string(),
+            faker.datatype.string(),
+            faker.datatype.string(),
+            faker.datatype.string(),
+            faker.datatype.number()
+          ),
+          new Conductor(faker.datatype.number(),
+            faker.image.imageUrl(),
+            faker.datatype.string(),
+            faker.datatype.string())
         )]
       )
     ];

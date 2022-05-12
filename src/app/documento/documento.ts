@@ -3,7 +3,7 @@ export class Documento {
   fotografia: string;
   fechaDeExpedicion: any;
   fechaDeVencimiento: any;
-  constructor(tipo: string,
+    constructor(tipo: string,
     fotografia: string,
     fechaDeExpedicion: any,
     fechaDeVencimiento: any){

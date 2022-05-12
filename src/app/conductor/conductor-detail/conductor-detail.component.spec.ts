@@ -7,6 +7,9 @@ import { ConductorDetailComponent } from './conductor-detail.component';
 import { ConductorDetail } from '../conductor-detail';
 import faker from '@faker-js/faker';
 import { Reserva } from 'src/app/reserva/Reserva';
+import { Profesor } from 'src/app/profesor/profesor';
+import { Vehiculo } from 'src/app/vehiculo/vehiculo';
+import { Conductor } from '../conductor';
 
 describe('ConductorDetailComponent', () => {
   let component: ConductorDetailComponent;
@@ -36,7 +39,23 @@ describe('ConductorDetailComponent', () => {
           faker.datatype.datetime,
           faker.datatype.string(),
           faker.datatype.string(),
-          []
+          new Profesor(faker.datatype.number(),
+            faker.datatype.string(),
+            faker.datatype.string(),
+            faker.datatype.string(),
+            faker.image.imageUrl()),
+          new Vehiculo(faker.datatype.number(),
+            faker.image.imageUrl(),
+            faker.datatype.string(),
+            faker.datatype.string(),
+            faker.datatype.string(),
+            faker.datatype.string(),
+            faker.datatype.number()
+          ),
+          new Conductor(faker.datatype.number(),
+            faker.image.imageUrl(),
+            faker.datatype.string(),
+            faker.datatype.string())
         )]
       )
     ;

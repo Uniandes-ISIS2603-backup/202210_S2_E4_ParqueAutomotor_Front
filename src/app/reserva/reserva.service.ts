@@ -12,6 +12,7 @@ private apiUrl: string = environment.baseUrl + '/reservas';
 
 constructor(private http: HttpClient) { }
 
+
 getReservas(): Observable<Reserva[]>{
   return this.http.get<Reserva[]>(this.apiUrl);
 }
