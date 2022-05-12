@@ -25,8 +25,9 @@ import { VehiculoModule } from './vehiculo/vehiculo.module';
     HttpClientModule,
     ConductorModule,
     VehiculoModule
+    
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
