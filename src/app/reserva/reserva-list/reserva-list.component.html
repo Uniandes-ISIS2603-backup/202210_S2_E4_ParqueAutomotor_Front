@@ -1,3 +1,24 @@
-<p>
-  reserva-list works!
-</p>
+
+
+<div *ngIf="selected">
+  <app-reserva-detail [reservaDetail]="selectedReserva"></app-reserva-detail>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col mb-2" *ngFor="let reseva of reservas">
+        <div class="card p-2" style="width: 15rem; height: 33rem">
+          <img
+          class="card-img-top"
+          src="{{ reseva.id }}"
+          alt="{{ reseva.id }}"
+          (click)="onSelectedReserva(reseva)"
+          />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ reseva.id }}</h5>
+            <p class="card-text">[{{ reseva.descripcion }}]</p>
+        </div>
+      </div>
+  </div>
+</div>
