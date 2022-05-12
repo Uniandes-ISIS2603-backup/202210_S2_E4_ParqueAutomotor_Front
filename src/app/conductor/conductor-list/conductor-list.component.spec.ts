@@ -21,7 +21,7 @@ describe('ConductorListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ConductorListComponent,AppComponent],
-      imports: [HttpClientModule]
+        
     })
     .compileComponents();
   }));
@@ -29,7 +29,7 @@ describe('ConductorListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ConductorListComponent);
     component = fixture.componentInstance;
-    
+
     component.conductores = [
       new ConductorDetail(
         faker.datatype.number(),
