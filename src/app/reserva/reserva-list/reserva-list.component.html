@@ -1,5 +1,10 @@
 
 
+
+<div class="container fluid">
+  <h1 class="center"> Reservas </h1>
+</div>
+
 <div *ngIf="selected">
   <app-reserva-detail [reservaDetail]="selectedReserva"></app-reserva-detail>
 </div>
@@ -10,7 +15,7 @@
         <div class="card p-2" style="width: 15rem; height: 33rem">
           <img
           class="card-img-top"
-          src="{{ reseva.id }}"
+          src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.concienciaeco.com%2F2012%2F04%2F27%2Fque-es-una-reserva-natural%2F&psig=AOvVaw09ePoO3EeWrbIzyRfNjhpc&ust=1652472107399000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKDtg7vg2vcCFQAAAAAdAAAAABAD.png"
           alt="{{ reseva.id }}"
           (click)="onSelectedReserva(reseva)"
           />
@@ -22,3 +27,4 @@
       </div>
   </div>
 </div>
+

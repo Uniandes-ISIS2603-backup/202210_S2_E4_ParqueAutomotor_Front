@@ -1,17 +1,17 @@
 export class Profesor {
   id: number;
-  nombre: string;
+  name: string;
   telefono: string;
   correo: string;
   foto: string;
 
   constructor(id: number,
-    nombre: string,
+    name: string,
     telefono: string,
     correo: string,
     foto: string){
       this.id=id;
-      this.nombre=nombre;
+      this.name=name;
       this.telefono=telefono;
       this.correo=correo;
       this.foto=foto;

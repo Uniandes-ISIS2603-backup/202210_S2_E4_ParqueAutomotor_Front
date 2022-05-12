@@ -1,16 +1,21 @@
 
-<div class="container fluid">
+<!-- <div class="container fluid">
   <h1 class="center"> Reservas </h1>
 </div>
-  <div class="container-fluid">
+<p>
+  {{reservaDetail.vehiculo.placa}}
+</p>
+<p>
+  name: {{reservaDetail.profesor.name}}
+</p> -->
+   <div class="container-fluid">
     <p class="h3 p-3">{{ reservaDetail.id }}</p>
     <div class="row">
       <div class="col-2">
         <div class="thumb">
           <img
             class="img-fluid"
-            src="{{ reservaDetail.id }}"
-            alt="{{ reservaDetail.id }}"
+            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.concienciaeco.com%2F2012%2F04%2F27%2Fque-es-una-reserva-natural%2F&psig=AOvVaw09ePoO3EeWrbIzyRfNjhpc&ust=1652472107399000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKDtg7vg2vcCFQAAAAAdAAAAABAD.png"
           />
         </div>
       </div>
@@ -22,13 +27,14 @@
           <dd>{{ reservaDetail.fechaHoraReservada}}</dd>
           <hr/>
           <dt class="bold">Profesor </dt>
-            <dd class="caption">{{ reservaDetail.profesor.nombre }}</dd>
+            <dd class="caption">{{ reservaDetail.profesor.name }}</dd>
           <hr />
           <dt class="bold">Vehiculo</dt>
           <dd class="caption">{{ reservaDetail.vehiculo.placa }}</dd>
           <hr />
           <dt class="bold">Conductor</dt>
           <dd class="caption">{{ reservaDetail.conductor.nombre }}</dd>
+
         </dl>
       </div>
     </div>

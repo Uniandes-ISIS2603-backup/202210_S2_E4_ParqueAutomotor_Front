@@ -24,6 +24,7 @@ export class ReservaListComponent implements OnInit {
   onSelectedReserva(reserva:Reserva):void{
     this.selected =true;
     this.selectedReserva = reserva;
+    console.log("Entrando a reserva ;)")
   }
   ngOnInit() {
     console.log("Entree a subscribir")
