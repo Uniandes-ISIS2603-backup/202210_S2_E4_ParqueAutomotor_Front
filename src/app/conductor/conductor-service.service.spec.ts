@@ -5,13 +5,14 @@ import {
   HttpTestingController
 } from '@angular/common/http/testing';
 import { ConductorServiceService } from './conductor-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ConductorServiceService', () => {
   let service: ConductorServiceService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
+      imports: [HttpClientTestingModule,HttpClientModule],
       providers: [ConductorServiceService]
     });
     service = TestBed.inject(ConductorServiceService);

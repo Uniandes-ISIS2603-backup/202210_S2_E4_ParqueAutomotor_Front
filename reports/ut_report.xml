@@ -1,63 +1,30 @@
 <testExecutions version="1">
-  <file path="src/app/conductor/conductor-service.service.spec.ts">
-    <testCase name="ConductorServiceService Service: conductor makes expected calls" duration="34"/>
-    <testCase name="ConductorServiceService can load instance" duration="13"/>
-  </file>
-  <file path="src/app/conductor/conductor-list/conductor-list.component.spec.ts">
-    <testCase name="ConductorListComponent should have an img element " duration="137">
-      <failure message="Error">NullInjectorError: R3InjectorError(DynamicTestModule)[ConductorServiceService -&gt; HttpClient -&gt; HttpClient]: 
-  NullInjectorError: No provider for HttpClient!
-error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'ConductorServiceService', 'HttpClient', 'HttpClient' ] })
-NullInjectorError: R3InjectorError(DynamicTestModule)[ConductorServiceService -&gt; HttpClient -&gt; HttpClient]: 
-  NullInjectorError: No provider for HttpClient!
-    at NullInjector.get (node_modules/@angular/core/fesm2015/core.mjs:11120:1)
-    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
-    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
-    at injectInjectorOnly (node_modules/@angular/core/fesm2015/core.mjs:4765:1)
-    at ɵɵinject (node_modules/@angular/core/fesm2015/core.mjs:4769:1)
-    at Object.ConductorServiceService_Factory [as factory] (ng:///ConductorServiceService/ɵfac.js:4:51)
-    at R3Injector.hydrate (node_modules/@angular/core/fesm2015/core.mjs:11457:1)
-    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11276:1)
-    at NgModuleRef.get (node_modules/@angular/core/fesm2015/core.mjs:21832:1)
-    at Object.get (node_modules/@angular/core/fesm2015/core.mjs:21509:1)
-
-TypeError: Cannot read properties of undefined (reading 'query')
-    at UserContext.&lt;anonymous&gt; (src/app/conductor/conductor-list/conductor-list.component.spec.ts:72:25)
-    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
-    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
-    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:371:1)
-    at Zone.run (node_modules/zone.js/fesm2015/zone.js:134:1)
-    at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:567:1)
-    at UserContext.&lt;anonymous&gt; (node_modules/zone.js/fesm2015/zone-testing.js:582:1)
-    at &lt;Jasmine&gt;
-</failure>
-    </testCase>
-  </file>
   <file path="src/app/conductor/conductor-detail/conductor-detail.component.spec.ts">
-    <testCase name="ConductorDetailComponent should create" duration="54"/>
+    <testCase name="ConductorDetailComponent should create" duration="97"/>
+  </file>
+  <file path="src/app/reserva/reserva-list/reserva-list.component.spec.ts">
+    <testCase name="ReservaListComponent should create" duration="28"/>
   </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'parqueAutomotor-front'" duration="39"/>
-    <testCase name="AppComponent should create the app" duration="12"/>
+    <testCase name="AppComponent should have as title 'parqueAutomotor-front'" duration="60"/>
+    <testCase name="AppComponent should create the app" duration="13"/>
   </file>
-  <file path="src/app/vehiculo/vehiculo-detail/vehiculo-detail.component.spec.ts">
-    <testCase name="VehiculoDetailComponent should create" duration="26"/>
+  <file path="src/app/conductor/conductor-service.service.spec.ts">
+    <testCase name="ConductorServiceService can load instance" duration="3"/>
+    <testCase name="ConductorServiceService Service: conductor makes expected calls" duration="9"/>
   </file>
-  <file path="src/app/reserva/reserva.service.spec.ts">
-    <testCase name="Service: Reserva should ..." duration="3"/>
+  <file path="src/app/conductor/conductor-list/conductor-list.component.spec.ts">
+    <testCase name="ConductorListComponent should have an img element " duration="16"/>
+  </file>
+  <file path="src/app/mantenimiento/mantenimiento-list/mantenimiento-list.component.spec.ts">
+    <testCase name="MantenimientoListComponent should create" duration="14"/>
   </file>
   <file path="src/app/vehiculo/vehiculo.service.spec.ts">
     <testCase name="VehiculoService can load instance" duration="6"/>
-    <testCase name="VehiculoService Service: vehiculo makes expected calls" duration="4"/>
-  </file>
-  <file path="src/app/vehiculo/vehiculo-list/vehiculo-list.component.spec.ts">
-    <testCase name="VehiculoListComponent should create" duration="13"/>
-  </file>
-  <file path="src/app/reserva/reserva-list/reserva-list.component.spec.ts">
-    <testCase name="ReservaListComponent should create" duration="36"/>
+    <testCase name="VehiculoService Service: vehiculo makes expected calls" duration="6"/>
   </file>
   <file path="src/app/reserva/reserva-detail/reserva-detail.component.spec.ts">
-    <testCase name="ReservaDetailComponent should create" duration="50">
+    <testCase name="ReservaDetailComponent should create" duration="31">
       <failure message="Error">TypeError: Cannot read properties of undefined (reading 'id')
     at ReservaDetailComponent_Template (ng:///ReservaDetailComponent.js:51:51)
     at executeTemplate (node_modules/@angular/core/fesm2015/core.mjs:9618:1)
@@ -73,9 +40,15 @@ TypeError: Cannot read properties of undefined (reading 'query')
     </testCase>
   </file>
   <file path="src/app/mantenimiento/mantenimiento.service.spec.ts">
-    <testCase name="Service: Mantenimiento should create" duration="15"/>
+    <testCase name="Service: Mantenimiento should create" duration="14"/>
   </file>
-  <file path="src/app/mantenimiento/mantenimiento-list/mantenimiento-list.component.spec.ts">
-    <testCase name="MantenimientoListComponent should create" duration="32"/>
+  <file path="src/app/reserva/reserva.service.spec.ts">
+    <testCase name="Service: Reserva should ..." duration="5"/>
+  </file>
+  <file path="src/app/vehiculo/vehiculo-list/vehiculo-list.component.spec.ts">
+    <testCase name="VehiculoListComponent should create" duration="10"/>
+  </file>
+  <file path="src/app/vehiculo/vehiculo-detail/vehiculo-detail.component.spec.ts">
+    <testCase name="VehiculoDetailComponent should create" duration="26"/>
   </file>
 </testExecutions>

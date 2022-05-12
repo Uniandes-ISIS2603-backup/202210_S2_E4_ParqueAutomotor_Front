@@ -28,7 +28,7 @@ import { ReservaModule } from './reserva/reserva.module';
     VehiculoModule,
     ReservaModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

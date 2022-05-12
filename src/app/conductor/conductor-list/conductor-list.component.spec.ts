@@ -6,12 +6,13 @@ import { DebugElement } from '@angular/core';
 import { ConductorListComponent } from './conductor-list.component';
 import faker from '@faker-js/faker';
 import { Conductor } from '../conductor';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppComponent } from 'src/app/app.component';
 import { ConductorDetail } from '../conductor-detail';
 import { Reserva } from 'src/app/reserva/Reserva';
 import { Profesor } from 'src/app/profesor/profesor';
 import { Vehiculo } from 'src/app/vehiculo/vehiculo';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('ConductorListComponent', () => {
   let component: ConductorListComponent;
@@ -21,6 +22,7 @@ describe('ConductorListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ConductorListComponent,AppComponent],
+      imports: [HttpClientTestingModule]
         
     })
     .compileComponents();
@@ -29,7 +31,6 @@ describe('ConductorListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ConductorListComponent);
     component = fixture.componentInstance;
-
     component.conductores = [
       new ConductorDetail(
         faker.datatype.number(),
