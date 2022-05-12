@@ -10,6 +10,7 @@ import { ProfesorModule } from './profesor/profesor.module';
 import { DocumentoModule } from './documento/documento.module';
 import { ConductorModule } from './conductor/conductor.module';
 import { VehiculoModule } from './vehiculo/vehiculo.module';
+import { ReservaModule } from './reserva/reserva.module';
 
 @NgModule({
   declarations: [
@@ -24,8 +25,8 @@ import { VehiculoModule } from './vehiculo/vehiculo.module';
     DocumentoModule,
     HttpClientModule,
     ConductorModule,
-    VehiculoModule
-    
+    VehiculoModule,
+    ReservaModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

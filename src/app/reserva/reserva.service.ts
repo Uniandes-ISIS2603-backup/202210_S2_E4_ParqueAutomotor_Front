@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ReservaService {
-private apiUrl: string = environment.baseUrl + 'reservas';
+private apiUrl: string = environment.baseUrl + '/reservas';
 
 constructor(private http: HttpClient) { }
 
