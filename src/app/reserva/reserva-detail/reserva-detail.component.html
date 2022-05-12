@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{ reservaDetail.id }}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img
+          class="img-fluid"
+          src="{{ reservaDetail.id }}"
+          alt="{{ reservaDetail.id }}"
+        />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt>Destino</dt>
+        <dd>{{reservaDetail.lugarDestino}}</dd>
+        <dt>Fecha Realización:</dt>
+        <dd>{{ reservaDetail.fechaHoraReservada}}</dd>
+        <hr />
+        <dt>Profesor</dt>
+        <dd>{{ reservaDetail.profesor.nombre }}</dd>
+        <hr />
+        <dt class="bold">Vehiculo</dt>
+        <dd class="caption">{{ reservaDetail.vehiculo.placa }}</dd>
+        <hr />
+        <dt class="bold">Conductor</dt>
+        <dd class="caption">{{ reservaDetail.conductor.nombre }}</dd>
+      </dl>
+    </div>
+  </div>
+ </div>

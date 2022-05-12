@@ -9,7 +9,8 @@ import { ReservaService } from '../reserva.service';
 })
 export class ReservaListComponent implements OnInit {
 
-
+  selectedReserva!:Reserva;
+  selected: Boolean = false;
   reservas: Array<Reserva> = [];
   constructor(private reservaService:ReservaService) { }
 
@@ -18,6 +19,11 @@ export class ReservaListComponent implements OnInit {
   //     this.reservas = reservas;
   //   })
   // }
+
+  onSelectedReserva(reserva:Reserva):void{
+    this.selected =true;
+    this.selectedReserva = reserva;
+  }
   ngOnInit() {
     // this.getReservas;
   }
