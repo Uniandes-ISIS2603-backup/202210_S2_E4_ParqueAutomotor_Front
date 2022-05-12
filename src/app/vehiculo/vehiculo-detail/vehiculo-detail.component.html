@@ -22,6 +22,11 @@
           {{ mantenimiento.fechaMantenimiento }}
         </dd>
 
+        <dt>Documentos</dt>
+        <dd class="caption" *ngFor="let documento of vehiculoDetail.documentos">
+          {{ documento.tipo }}
+        </dd>
+
         <dt>Modelo</dt>
         <dd>{{ vehiculoDetail.modelo }}</dd>
         <hr />
