@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Conductor } from '../conductor';
+import { ConductorDetail } from '../conductor-detail';
 import { ConductorServiceService } from '../conductor-service.service';
 
 @Component({
@@ -9,8 +10,13 @@ import { ConductorServiceService } from '../conductor-service.service';
 })
 export class ConductorListComponent implements OnInit {
 
-  conductores: Array<Conductor>=[];
-
+  conductores: Array<ConductorDetail>=[];
+  selected: Boolean = false;
+  selectedConductor!: ConductorDetail;
+  onSelected(Conductor: ConductorDetail): void {
+    this.selected = true;
+    this.selectedConductor = Conductor;
+  }
   constructor(private ConductorService:ConductorServiceService) {   }
 
   getConductors(): void {

@@ -8,3 +8,9 @@ img {
   display: flex;
   justify-content: center;
 }
+.card-header-img {
+  padding: 2% 2% 2% 2%;
+  margin: 0px auto;
+}
+
+

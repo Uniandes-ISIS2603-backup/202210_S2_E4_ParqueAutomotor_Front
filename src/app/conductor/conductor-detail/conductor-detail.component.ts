@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ConductorDetail } from '../conductor-detail';
 
 @Component({
   selector: 'app-conductor-detail',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./conductor-detail.component.css']
 })
 export class ConductorDetailComponent implements OnInit {
-
+  @Input() conductorDetail!: ConductorDetail;
   constructor() { }
 
   ngOnInit() {

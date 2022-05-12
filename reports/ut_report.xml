@@ -1,25 +1,90 @@
 <testExecutions version="1">
-  <file path="src/app/mantenimiento/mantenimiento-list/mantenimiento-list.component.spec.ts">
-    <testCase name="MantenimientoListComponent should create" duration="122"/>
+  <file path="src/app/vehiculo/vehiculo.service.spec.ts">
+    <testCase name="Service: Vehiculo should ..." duration="35">
+      <failure message="Error">NullInjectorError: R3InjectorError(DynamicTestModule)[VehiculoService -&gt; HttpClient -&gt; HttpClient]: 
+  NullInjectorError: No provider for HttpClient!
+error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'VehiculoService', 'HttpClient', 'HttpClient' ] })
+NullInjectorError: R3InjectorError(DynamicTestModule)[VehiculoService -&gt; HttpClient -&gt; HttpClient]: 
+  NullInjectorError: No provider for HttpClient!
+    at NullInjector.get (node_modules/@angular/core/fesm2015/core.mjs:11120:1)
+    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
+    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
+    at injectInjectorOnly (node_modules/@angular/core/fesm2015/core.mjs:4765:1)
+    at ɵɵinject (node_modules/@angular/core/fesm2015/core.mjs:4769:1)
+    at Object.VehiculoService_Factory [as factory] (ng:///VehiculoService/ɵfac.js:4:43)
+    at R3Injector.hydrate (node_modules/@angular/core/fesm2015/core.mjs:11457:1)
+    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11276:1)
+    at NgModuleRef.get (node_modules/@angular/core/fesm2015/core.mjs:21832:1)
+    at TestBedRender3.inject (node_modules/@angular/core/fesm2015/testing.mjs:1719:1)
+</failure>
+    </testCase>
   </file>
-  <file path="src/app/conductor/conductor-list/conductor-list.component.spec.ts">
-    <testCase name="ConductorListComponent should have an img element " duration="54"/>
+  <file path="src/app/vehiculo/vehiculo-detail/vehiculo-detail.component.spec.ts">
+    <testCase name="VehiculoDetailComponent should create" duration="125">
+      <failure message="Error">TypeError: Cannot read properties of undefined (reading 'placa')
+    at VehiculoDetailComponent_Template (ng:///VehiculoDetailComponent.js:72:52)
+    at executeTemplate (node_modules/@angular/core/fesm2015/core.mjs:9618:1)
+    at refreshView (node_modules/@angular/core/fesm2015/core.mjs:9484:1)
+    at refreshComponent (node_modules/@angular/core/fesm2015/core.mjs:10655:1)
+    at refreshChildComponents (node_modules/@angular/core/fesm2015/core.mjs:9280:1)
+    at refreshView (node_modules/@angular/core/fesm2015/core.mjs:9534:1)
+    at renderComponentOrTemplate (node_modules/@angular/core/fesm2015/core.mjs:9598:1)
+    at tickRootContext (node_modules/@angular/core/fesm2015/core.mjs:10829:1)
+    at detectChangesInRootView (node_modules/@angular/core/fesm2015/core.mjs:10854:1)
+    at RootViewRef.detectChanges (node_modules/@angular/core/fesm2015/core.mjs:21451:1)
+</failure>
+    </testCase>
   </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="25"/>
-    <testCase name="AppComponent should have as title 'parqueAutomotor-front'" duration="24"/>
+    <testCase name="AppComponent should create the app" duration="100"/>
+    <testCase name="AppComponent should have as title 'parqueAutomotor-front'" duration="18"/>
+  </file>
+  <file path="src/app/conductor/conductor-detail/conductor-detail.component.spec.ts">
+    <testCase name="ConductorDetailComponent should create" duration="57"/>
   </file>
   <file path="src/app/mantenimiento/mantenimiento.service.spec.ts">
-    <testCase name="Service: Mantenimiento should create" duration="30"/>
-  </file>
-  <file path="src/app/conductor/conductor-service.service.spec.ts">
-    <testCase name="ConductorServiceService can load instance" duration="8"/>
-    <testCase name="ConductorServiceService Service: conductor makes expected calls" duration="12"/>
-  </file>
-  <file path="src/app/reserva/reserva.service.spec.ts">
-    <testCase name="Service: Reserva should ..." duration="8"/>
+    <testCase name="Service: Mantenimiento should create" duration="20"/>
   </file>
   <file path="src/app/reserva/reserva-list/reserva-list.component.spec.ts">
-    <testCase name="ReservaListComponent should create" duration="21"/>
+    <testCase name="ReservaListComponent should create" duration="16"/>
+  </file>
+  <file path="src/app/mantenimiento/mantenimiento-list/mantenimiento-list.component.spec.ts">
+    <testCase name="MantenimientoListComponent should create" duration="22"/>
+  </file>
+  <file path="src/app/conductor/conductor-list/conductor-list.component.spec.ts">
+    <testCase name="ConductorListComponent should have an img element " duration="41"/>
+  </file>
+  <file path="src/app/vehiculo/vehiculo-list/vehiculo-list.component.spec.ts">
+    <testCase name="VehiculoListComponent should create" duration="62">
+      <failure message="Error">NullInjectorError: R3InjectorError(DynamicTestModule)[VehiculoService -&gt; HttpClient -&gt; HttpClient]: 
+  NullInjectorError: No provider for HttpClient!
+error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'VehiculoService', 'HttpClient', 'HttpClient' ] })
+NullInjectorError: R3InjectorError(DynamicTestModule)[VehiculoService -&gt; HttpClient -&gt; HttpClient]: 
+  NullInjectorError: No provider for HttpClient!
+    at NullInjector.get (node_modules/@angular/core/fesm2015/core.mjs:11120:1)
+    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
+    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
+    at injectInjectorOnly (node_modules/@angular/core/fesm2015/core.mjs:4765:1)
+    at ɵɵinject (node_modules/@angular/core/fesm2015/core.mjs:4769:1)
+    at Object.VehiculoService_Factory [as factory] (ng:///VehiculoService/ɵfac.js:4:43)
+    at R3Injector.hydrate (node_modules/@angular/core/fesm2015/core.mjs:11457:1)
+    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11276:1)
+    at NgModuleRef.get (node_modules/@angular/core/fesm2015/core.mjs:21832:1)
+    at Object.get (node_modules/@angular/core/fesm2015/core.mjs:21509:1)
+
+Error: Expected undefined to be truthy.
+    at &lt;Jasmine&gt;
+    at UserContext.&lt;anonymous&gt; (src/app/vehiculo/vehiculo-list/vehiculo-list.component.spec.ts:26:23)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
+</failure>
+    </testCase>
+  </file>
+  <file path="src/app/conductor/conductor-service.service.spec.ts">
+    <testCase name="ConductorServiceService can load instance" duration="9"/>
+    <testCase name="ConductorServiceService Service: conductor makes expected calls" duration="7"/>
+  </file>
+  <file path="src/app/reserva/reserva.service.spec.ts">
+    <testCase name="Service: Reserva should ..." duration="4"/>
   </file>
 </testExecutions>

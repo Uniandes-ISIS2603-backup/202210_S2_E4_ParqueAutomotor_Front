@@ -8,6 +8,8 @@ import faker from '@faker-js/faker';
 import { Conductor } from '../conductor';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from 'src/app/app.component';
+import { ConductorDetail } from '../conductor-detail';
+import { Reserva } from 'src/app/reserva/Reserva';
 
 describe('ConductorListComponent', () => {
   let component: ConductorListComponent;
@@ -25,14 +27,22 @@ describe('ConductorListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ConductorListComponent);
     component = fixture.componentInstance;
-
-
+    
     component.conductores = [
-      new Conductor(
+      new ConductorDetail(
         faker.datatype.number(),
         faker.image.imageUrl(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
+        [new Reserva(
+          faker.datatype.number(),
+          faker.datatype.boolean(),
+          faker.datatype.datetime,
+          faker.datatype.datetime,
+          faker.datatype.string(),
+          faker.datatype.string(),
+          []
+        )]
       )
     ];
 

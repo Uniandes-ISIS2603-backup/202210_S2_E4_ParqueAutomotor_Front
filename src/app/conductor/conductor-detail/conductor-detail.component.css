@@ -1,0 +1,15 @@
+img {
+  width: 200px; /* You can set the dimensions to whatever you want */
+  height: 200px;
+  object-fit: cover;
+}
+.center
+{
+  display: flex;
+  justify-content: center;
+}
+.card-header-img {
+  padding: 2% 2% 2% 2%;
+  margin: 0px auto;
+}
+

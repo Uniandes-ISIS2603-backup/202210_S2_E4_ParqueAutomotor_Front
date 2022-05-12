@@ -1,3 +1,27 @@
-<p>
-  conductor-detail works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <div class="card-header-img">
+        <img
+        class="img-fluid" 
+          src="{{ conductorDetail.foto }}"
+          alt="{{ conductorDetail.nombre }}"
+        />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt>Nombre</dt>
+        <dd>{{ conductorDetail.nombre }}</dd>
+        <dt>Identificación</dt>
+        <dd>{{ conductorDetail.identificacion }}</dd>
+        <dt>Reservas</dt>
+        <dd *ngFor="let reserva of conductorDetail.reservas">
+          {{ reserva.fechaHoraReservada }}
+        </dd>
+
+      </dl>
+    </div>
+  </div>
+ </div>
+
