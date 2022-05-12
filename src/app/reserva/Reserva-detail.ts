@@ -7,9 +7,9 @@ export class ReservaDetail extends Reserva{
 
   estudiantes: Array<Estudiante>=[];
 
-  constructor(id:number,activa:boolean,fechaHoraReservada: any,fechaHoraEfectuada: any,lugarDestino:string,descripcion: string,estudiantes: Array<Estudiante>,profesor: Profesor, vehiculo: Vehiculo,conductor: Conductor )
+  constructor(id:number,activa:boolean,fechaHoraReservada: any,fechaHoraEfectuada: any,lugarDestino:string,descripcion: string,profesor: Profesor,estudiantes: Array<Estudiante>, vehiculo: Vehiculo,conductor: Conductor )
   {
-    super(id,activa,fechaHoraReservada,fechaHoraEfectuada,lugarDestino,descripcion,estudiantes,profesor, vehiculo,conductor );
+    super(id,activa,fechaHoraReservada,fechaHoraEfectuada,lugarDestino,descripcion,profesor, vehiculo,conductor );
     this.estudiantes = estudiantes;
   }
 }
