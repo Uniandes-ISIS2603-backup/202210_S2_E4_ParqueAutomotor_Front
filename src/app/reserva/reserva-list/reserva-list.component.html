@@ -12,13 +12,14 @@
         </div>
         <div class="card-body">
           <h5 class="card-title">{{ reseva.id }}</h5>
+          <h5>{{reseva.profesor.name}}</h5>
           <p class="card-text" style="width: 25rem">[{{ reseva.descripcion }}]</p>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-4" *ngIf="selected" style="width: 30rem">
-    <div class = "row" style="margin-top: 10px;">
+  <div class="col-6" *ngIf="selected" style="width: 30rem">
+    <div class = "row; overflow-hidden" style="height: 650px;margin-top: 10px;">
       <app-reserva-detail [reservaDetail]="selectedReserva"></app-reserva-detail>
     </div>
   </div>
