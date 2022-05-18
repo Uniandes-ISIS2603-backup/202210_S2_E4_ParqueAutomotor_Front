@@ -1,18 +1,10 @@
-<div class="container fluid">
-  <h1 class="center"> Conductores </h1>
-
-  <div class="row form-group">
-    <div class="row ">
-      <div *ngIf="selected">
-        <app-conductor-detail [conductorDetail]="selectedConductor"></app-conductor-detail>
-      </div>
-    </div>
-  </div>
-    <div class="row">
+<div class="row">
+  <div class="col-7">
+    <div class="row" style="overflow-y:auto; height: 480px;margin-top: 10px;">
       <div *ngFor="let conductor of conductores" class="col mb-3" style="text-align:center">
         <div class="card">
-          <img class="card-header-img " src="{{conductor.foto}}"
-            alt="{{ conductor.nombre }}" (click)="onSelected(conductor)" />
+          <img class="card-header-img " src="{{conductor.foto}}" alt="{{ conductor.nombre }}"
+            (click)="onSelected(conductor)" />
           <div class="card-body">
             <h5 class="card-title center">{{conductor.nombre}}</h5>
             <p class="card-text center">{{conductor.identificacion}}</p>
@@ -21,6 +13,13 @@
       </div>
 
     </div>
-
+  </div>
+  <div class="col">
+    <div class="row" style="margin-top: 10px;">
+      <div *ngIf="selected">
+        <app-conductor-detail [conductorDetail]="selectedConductor"></app-conductor-detail>
+      </div>
+    </div>
+  </div>
 
 </div>

@@ -13,3 +13,7 @@ img {
   margin: 0px auto;
 }
 
+.horizontal {
+  display: flex;
+  justify-content: space-between;
+}
