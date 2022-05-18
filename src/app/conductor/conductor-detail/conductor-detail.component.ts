@@ -8,6 +8,7 @@ import { ConductorDetail } from '../conductor-detail';
 })
 export class ConductorDetailComponent implements OnInit {
   @Input() conductorDetail!: ConductorDetail;
+  activate = true;
   constructor() { }
 
   ngOnInit() {

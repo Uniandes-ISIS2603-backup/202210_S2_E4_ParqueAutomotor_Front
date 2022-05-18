@@ -9,6 +9,7 @@ import { ConductorServiceService } from '../conductor-service.service';
   styleUrls: ['./conductor-list.component.css']
 })
 export class ConductorListComponent implements OnInit {
+  activate:Boolean =false;
 
   conductores: Array<ConductorDetail>=[];
   selected: Boolean = false;

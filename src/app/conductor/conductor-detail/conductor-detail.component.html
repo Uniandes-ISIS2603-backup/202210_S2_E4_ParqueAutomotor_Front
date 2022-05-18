@@ -1,10 +1,10 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col">
-      <div class="card-header-img">
-        <img class="img-fluid" src="{{ conductorDetail.foto }}" alt="{{ conductorDetail.nombre }}" />
-      </div>
+<div class="container border">
+  <div class="row" style="align-items: center;">
+
+    <div class="col mx-auto text-center">
+        <img class="img-responsive img" src="{{ conductorDetail.foto }}" alt="{{ conductorDetail.nombre }}" />
     </div>
+
     <div class="col">
       <dl>
         <dt>Nombre</dt>
@@ -15,14 +15,13 @@
         <div class="scroll-container" style="overflow-y: auto; height: 100px;width: 80%;">
           <dd *ngFor="let reserva of conductorDetail.reservas">
             <li class="list-group-item; list-group-item-action">
-              {{reserva.id}}
               <a routerLink="/reservas/{{ reserva.id}}">{{ reserva.id }}</a>
+              {{reserva.id}}
             </li>
           </dd>
         </div>
-
-
       </dl>
+
     </div>
   </div>
 </div>
