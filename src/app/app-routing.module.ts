@@ -4,7 +4,7 @@ import { ReservaListComponent } from './reserva/reserva-list/reserva-list.compon
 
 const routes: Routes = [
 ];
-//{path : '',component:ReservaListComponent}
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
