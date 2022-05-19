@@ -25,7 +25,8 @@
               (click)="onSelectedReserva(reserva)"
               class="list-group-item; list-group-item-action"
             >
-              {{ reserva.fechaHoraReservada}}
+              <a routerLink="/reservas/{{ reserva.id }}">
+                {{ reserva.fechaHoraReservada}}</a>
             </li>
           </dd>
         </div>
