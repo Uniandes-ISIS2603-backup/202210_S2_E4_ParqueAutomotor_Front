@@ -1,24 +1,39 @@
+<!--
 <h1 class="text-center">Vehiculos</h1>
 
 <div *ngIf="selected">
   <app-vehiculo-detail [vehiculoDetail]="selectedVehiculo"></app-vehiculo-detail>
 </div>
+-->
 
 <div class="container-fluid">
-    <div class="row">
-      <div *ngFor="let vehiculo of vehiculos" class="col mb-2">
-        <div class="card p-2" style="width: 15rem; height: 33rem">
-          <img
-            class="card-img-top"
-            src="{{ vehiculo.foto }}"
-            alt="{{ vehiculo.placa }}"
-            (click)="onSelected(vehiculo)"
-          />
-          <div class="card-body">
-            <h5 class="card-title">{{ vehiculo.placa }}</h5>
-            <p class="card-text">[{{ vehiculo.tipo }}]</p>
+  <div class="row">
+    <div class="col ">
+      <div class="row" style="overflow-y:auto; height: 480px;margin-top: 10px;">
+        <div *ngFor="let vehiculo of vehiculos" class="col mb-3" style="text-align:center">
+          <div class="card p-2" style="width: 15rem; height: 33rem">
+            <img
+              class="card-img-top"
+              src="{{ vehiculo.foto }}"
+              alt="{{ vehiculo.placa }}"
+              (click)="onSelected(vehiculo)"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ vehiculo.placa }}</h5>
+              <p class="card-text">[{{ vehiculo.tipo }}]</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div [ngClass]="selected ? 'col' : 'd-none'">
+      <div class="row" style="margin-top: 10px;">
+        <div *ngIf="selected">
+          <app-vehiculo-detail [vehiculoDetail]="selectedVehiculo"></app-vehiculo-detail>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
