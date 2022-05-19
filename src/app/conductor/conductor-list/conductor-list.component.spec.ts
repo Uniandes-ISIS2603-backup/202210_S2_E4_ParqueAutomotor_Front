@@ -13,6 +13,8 @@ import { Reserva } from 'src/app/reserva/Reserva';
 import { Profesor } from 'src/app/profesor/profesor';
 import { Vehiculo } from 'src/app/vehiculo/vehiculo';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ReservaModule } from 'src/app/reserva/reserva.module';
 
 describe('ConductorListComponent', () => {
   let component: ConductorListComponent;
@@ -22,7 +24,7 @@ describe('ConductorListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ConductorListComponent,AppComponent],
-      imports: [HttpClientTestingModule]
+      imports: [HttpClientTestingModule,RouterTestingModule,ReservaModule]
         
     })
     .compileComponents();

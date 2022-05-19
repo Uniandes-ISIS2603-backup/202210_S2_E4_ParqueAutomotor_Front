@@ -10,6 +10,9 @@ import { Reserva } from 'src/app/reserva/Reserva';
 import { Profesor } from 'src/app/profesor/profesor';
 import { Vehiculo } from 'src/app/vehiculo/vehiculo';
 import { Conductor } from '../conductor';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ReservaModule } from 'src/app/reserva/reserva.module';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('ConductorDetailComponent', () => {
   let component: ConductorDetailComponent;
@@ -18,7 +21,9 @@ describe('ConductorDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ConductorDetailComponent ]
+      declarations: [ ConductorDetailComponent ],
+      imports: [HttpClientTestingModule,RouterTestingModule,ReservaModule]
+      
     })
     .compileComponents();
   }));
@@ -59,6 +64,7 @@ describe('ConductorDetailComponent', () => {
         )]
       )
     ;
+    component.activate=false;
     debugElement = fixture.debugElement;
     fixture.detectChanges();
   });

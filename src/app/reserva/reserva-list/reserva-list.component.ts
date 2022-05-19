@@ -15,7 +15,6 @@ export class ReservaListComponent implements OnInit {
   constructor(private reservaService:ReservaService) { }
 
    getReservas():void {
-     console.log("Entree a subscribir")
      this.reservaService.getReservas().subscribe(reservas => {
        this.reservas = reservas;
      })
@@ -27,7 +26,6 @@ export class ReservaListComponent implements OnInit {
     console.log("Entrando a reserva ;)")
   }
   ngOnInit() {
-    console.log("Entree a subscribir")
     this.getReservas();
   }
 
