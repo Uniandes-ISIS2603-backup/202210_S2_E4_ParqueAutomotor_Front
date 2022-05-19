@@ -1,38 +1,38 @@
 <testExecutions version="1">
-  <file path="src/app/vehiculo/vehiculo.service.spec.ts">
-    <testCase name="VehiculoService Service: vehiculo makes expected calls" duration="218"/>
-    <testCase name="VehiculoService can load instance" duration="6"/>
-  </file>
-  <file path="src/app/vehiculo/vehiculo-detail/vehiculo-detail.component.spec.ts">
-    <testCase name="VehiculoDetailComponent should create" duration="114"/>
+  <file path="src/app/reserva/reserva-list/reserva-list.component.spec.ts">
+    <testCase name="ReservaListComponent should create" duration="121"/>
   </file>
   <file path="src/app/reserva/reserva.service.spec.ts">
-    <testCase name="Service: Reserva should ..." duration="4"/>
-  </file>
-  <file path="src/app/vehiculo/vehiculo-list/vehiculo-list.component.spec.ts">
-    <testCase name="VehiculoListComponent should create" duration="40"/>
-  </file>
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="35"/>
-    <testCase name="AppComponent should have as title 'parqueAutomotor-front'" duration="9"/>
-  </file>
-  <file path="src/app/conductor/conductor-detail/conductor-detail.component.spec.ts">
-    <testCase name="ConductorDetailComponent should create" duration="27"/>
-  </file>
-  <file path="src/app/conductor/conductor-list/conductor-list.component.spec.ts">
-    <testCase name="ConductorListComponent should have an img element " duration="17"/>
-  </file>
-  <file path="src/app/conductor/conductor-service.service.spec.ts">
-    <testCase name="ConductorServiceService can load instance" duration="5"/>
-    <testCase name="ConductorServiceService Service: conductor makes expected calls" duration="4"/>
-  </file>
-  <file path="src/app/mantenimiento/mantenimiento-list/mantenimiento-list.component.spec.ts">
-    <testCase name="MantenimientoListComponent should create" duration="35"/>
-  </file>
-  <file path="src/app/reserva/reserva-list/reserva-list.component.spec.ts">
-    <testCase name="ReservaListComponent should create" duration="12"/>
+    <testCase name="Service: Reserva should ..." duration="21"/>
   </file>
   <file path="src/app/mantenimiento/mantenimiento.service.spec.ts">
-    <testCase name="Service: Mantenimiento should create" duration="10"/>
+    <testCase name="Service: Mantenimiento should create" duration="58"/>
+  </file>
+  <file path="src/app/vehiculo/vehiculo.service.spec.ts">
+    <testCase name="VehiculoService Service: vehiculo makes expected calls" duration="24"/>
+    <testCase name="VehiculoService can load instance" duration="14"/>
+  </file>
+  <file path="src/app/vehiculo/vehiculo-list/vehiculo-list.component.spec.ts">
+    <testCase name="VehiculoListComponent should create" duration="237"/>
+  </file>
+  <file path="src/app/mantenimiento/mantenimiento-list/mantenimiento-list.component.spec.ts">
+    <testCase name="MantenimientoListComponent should create" duration="17"/>
+  </file>
+  <file path="src/app/conductor/conductor-list/conductor-list.component.spec.ts">
+    <testCase name="ConductorListComponent should have an img element " duration="381"/>
+  </file>
+  <file path="src/app/conductor/conductor-service.service.spec.ts">
+    <testCase name="ConductorServiceService Service: conductor makes expected calls" duration="102"/>
+    <testCase name="ConductorServiceService can load instance" duration="5"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should have as title 'parqueAutomotor-front'" duration="18"/>
+    <testCase name="AppComponent should create the app" duration="122"/>
+  </file>
+  <file path="src/app/conductor/conductor-detail/conductor-detail.component.spec.ts">
+    <testCase name="ConductorDetailComponent should create" duration="382"/>
+  </file>
+  <file path="src/app/vehiculo/vehiculo-detail/vehiculo-detail.component.spec.ts">
+    <testCase name="VehiculoDetailComponent should create" duration="100"/>
   </file>
 </testExecutions>
