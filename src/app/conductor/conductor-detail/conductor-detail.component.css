@@ -1,6 +1,5 @@
 img {
-  width: 200px; /* You can set the dimensions to whatever you want */
-  height: 200px;
+
   object-fit: cover;
 }
 .center
@@ -13,3 +12,15 @@ img {
   margin: 0px auto;
 }
 
+.horizontal {
+  display: flex;
+  justify-content: space-between;
+}
+.centerBlock {
+  display: table;
+  margin: auto;
+}
+.img{
+  width: 200px;
+  height: 200px;
+}

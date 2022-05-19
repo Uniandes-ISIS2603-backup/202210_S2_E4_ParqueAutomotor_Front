@@ -11,4 +11,6 @@ export class Conductor {
     this.nombre = nombre;
     this.identificacion = identificacion;
   }
+
 }
+

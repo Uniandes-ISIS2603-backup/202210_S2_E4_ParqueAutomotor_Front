@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Reserva } from 'src/app/reserva/Reserva';
 import { ConductorDetail } from '../conductor-detail';
 
 @Component({
@@ -8,7 +9,14 @@ import { ConductorDetail } from '../conductor-detail';
 })
 export class ConductorDetailComponent implements OnInit {
   @Input() conductorDetail!: ConductorDetail;
-  constructor() { }
+  @Input() activate: boolean=true;
+  activeStatus: boolean = true;
+
+  reserva!: Reserva;
+  onSelectedReserva(reserva: Reserva): void {
+    this.activate = true;
+    this.reserva = reserva;
+  }
 
   ngOnInit() {
   }

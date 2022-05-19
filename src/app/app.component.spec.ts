@@ -4,6 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { ConductorListComponent } from './conductor/conductor-list/conductor-list.component';
 import { MantenimientoListComponent } from './mantenimiento/mantenimiento-list/mantenimiento-list.component';
+import { ReservaDetailComponent } from './reserva/reserva-detail/reserva-detail.component';
 import { VehiculoListComponent } from './vehiculo/vehiculo-list/vehiculo-list.component';
 
 describe('AppComponent', () => {

@@ -1,30 +1,26 @@
 
-
-
-<div class="container fluid">
-  <h1 class="center"> Reservas </h1>
-</div>
-
-<div *ngIf="selected">
-  <app-reserva-detail [reservaDetail]="selectedReserva"></app-reserva-detail>
-</div>
-
-<div class="container-fluid">
-  <div class="row">
-      <div class="col mb-2" *ngFor="let reseva of reservas">
-        <div class="card p-2" style="width: 15rem; height: 33rem">
+<div class="row">
+  <div class="col-6">
+    <div class="row" style="overflow-y:auto; height: 650px;margin-top: 10px;">
+      <div class="col-md-12" *ngFor="let reseva of reservas">
+        <div class="card">
           <img
-          class="card-img-top"
+          class="card-header-img"
           src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.concienciaeco.com%2F2012%2F04%2F27%2Fque-es-una-reserva-natural%2F&psig=AOvVaw09ePoO3EeWrbIzyRfNjhpc&ust=1652472107399000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKDtg7vg2vcCFQAAAAAdAAAAABAD.png"
           alt="{{ reseva.id }}"
-          (click)="onSelectedReserva(reseva)"
-          />
+          (click)="onSelectedReserva(reseva)"/>
         </div>
         <div class="card-body">
           <h5 class="card-title">{{ reseva.id }}</h5>
-            <p class="card-text">[{{ reseva.descripcion }}]</p>
+          <h5>{{reseva.profesor.name}}</h5>
+          <p class="card-text" style="width: 25rem">[{{ reseva.descripcion }}]</p>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="col-6" *ngIf="selected" style="width: 30rem">
+    <div class = "row; overflow-hidden" style="height: 650px;margin-top: 10px;">
+      <app-reserva-detail [reservaDetail]="selectedReserva"></app-reserva-detail>
+    </div>
   </div>
 </div>
-

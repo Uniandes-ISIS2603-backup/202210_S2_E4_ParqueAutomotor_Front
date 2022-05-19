@@ -11,6 +11,7 @@ import { DocumentoModule } from './documento/documento.module';
 import { ConductorModule } from './conductor/conductor.module';
 import { VehiculoModule } from './vehiculo/vehiculo.module';
 import { ReservaModule } from './reserva/reserva.module';
+import { ComductorRoutingModule } from './conductor/ConductorRoutingModule';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ReservaModule } from './reserva/reserva.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ComductorRoutingModule,
     MantenimientoModule,
     EstudianteModule,
     ProfesorModule,
