@@ -4,12 +4,15 @@ import { ConductorListComponent } from './conductor-list/conductor-list.componen
 import { ConductorDetailComponent } from './conductor-detail/conductor-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { ReservaModule } from '../reserva/reserva.module';
+import { ReservaDetailComponent } from '../reserva/reserva-detail/reserva-detail.component';
 
 @NgModule({
   imports: [
     CommonModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    ReservaModule
   ],
   declarations: [ConductorListComponent,ConductorDetailComponent],
   exports: [ConductorListComponent]

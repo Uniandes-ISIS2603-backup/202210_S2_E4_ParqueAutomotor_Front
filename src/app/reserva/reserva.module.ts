@@ -14,6 +14,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   declarations: [ReservaListComponent,ReservaDetailComponent],
-  exports:[ReservaListComponent]
+  exports:[ReservaListComponent,ReservaDetailComponent]
 })
 export class ReservaModule {}

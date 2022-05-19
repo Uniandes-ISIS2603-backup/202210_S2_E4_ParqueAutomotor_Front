@@ -1,8 +1,12 @@
-<div class="container border">
+<div class="container border" style="overflow-y: auto; height: 450px;">
   <div class="row" style="align-items: center;">
-
     <div class="col mx-auto text-center">
-        <img class="img-responsive img" src="{{ conductorDetail.foto }}" alt="{{ conductorDetail.nombre }}" />
+      <img
+        class="img-responsive img"
+        src="{{ conductorDetail.foto }}"
+        alt="{{ conductorDetail.nombre }}"
+        (click)="activate=!activate"
+      />
     </div>
 
     <div class="col">
@@ -12,16 +16,27 @@
         <dt>Identificación</dt>
         <dd>{{ conductorDetail.identificacion }}</dd>
         <dt>Reservas</dt>
-        <div class="scroll-container" style="overflow-y: auto; height: 100px;width: 80%;">
+        <div
+          class="scroll-container"
+          style="overflow-y: auto; height: 100px; width: 80%"
+        >
           <dd *ngFor="let reserva of conductorDetail.reservas">
-            <li class="list-group-item; list-group-item-action">
-              <a routerLink="/reservas/{{ reserva.id}}">{{ reserva.id }}</a>
-              {{reserva.id}}
+            <li
+              (click)="onSelectedReserva(reserva)"
+              class="list-group-item; list-group-item-action"
+            >
+              {{ reserva.fechaHoraReservada}}
             </li>
           </dd>
         </div>
       </dl>
-
+    </div>
+  </div>
+  <div [ngClass]="activate? 'row' : 'd-none'" style="margin-top: 10px">
+    <div *ngIf="activate">
+      <div class="container border" style="margin-bottom: 10px">
+        <app-reserva-detail [reservaDetail]="reserva"></app-reserva-detail>
+      </div>
     </div>
   </div>
 </div>

@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { ConductorDetailComponent } from './conductor-detail/conductor-detail.component';
 import { ConductorListComponent } from './conductor-list/conductor-list.component';
 
-// TODO pendiente hacer el RouterLink de reserva
 const routes: Routes = [{
  path: 'conductores',
  children: [
