@@ -1,3 +1,9 @@
 * [lang^=en] {
   color: green;
 }
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}

@@ -1,3 +1,4 @@
+
 <div class="container border" style="overflow-y: auto; height: 450px;">
   <div class="row" style="align-items: center;">
     <div class="col mx-auto text-center">
@@ -33,7 +34,7 @@
       </dl>
     </div>
   </div>
-  <div [ngClass]="activate? 'row' : 'd-none'" style="margin-top: 10px">
+  <div [ngClass]="activate ? 'row' : 'd-none'" style="margin-top: 10px">
     <div *ngIf="activate">
       <div class="container border" style="margin-bottom: 10px">
         <app-reserva-detail [reservaDetail]="reserva"></app-reserva-detail>

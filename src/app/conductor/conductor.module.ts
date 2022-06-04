@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ReservaModule } from '../reserva/reserva.module';
 import { ReservaDetailComponent } from '../reserva/reserva-detail/reserva-detail.component';
+import { ConductorFilterComponent } from './conductor-filter/conductor-filter.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,7 @@ import { ReservaDetailComponent } from '../reserva/reserva-detail/reserva-detail
     RouterModule,
     ReservaModule
   ],
-  declarations: [ConductorListComponent,ConductorDetailComponent],
+  declarations: [ConductorListComponent,ConductorDetailComponent,ConductorFilterComponent],
   exports: [ConductorListComponent]
 })
 export class ConductorModule { }
