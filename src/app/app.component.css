@@ -7,3 +7,11 @@
 .left {
   text-align: left;
 }
+#castillo{
+  width:90px;
+  height: 90px;
+}
+
+.nav-item{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
