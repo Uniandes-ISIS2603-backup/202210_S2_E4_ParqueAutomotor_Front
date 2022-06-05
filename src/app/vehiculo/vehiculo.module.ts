@@ -5,6 +5,7 @@ import { VehiculoDetailComponent } from './vehiculo-detail/vehiculo-detail.compo
 import { RouterModule } from '@angular/router';
 import { ReservaRoutingModule } from '../reserva/reserva-routing.routing';
 import { VehiculoRoutingModule } from './vehiculo-routing.module';
+import { VehiculoFilterComponent } from './vehiculo-filter/vehiculo-filter.component';
 import { MantenimientoModule } from '../mantenimiento/mantenimiento.module';
 import { ReservaModule } from '../reserva/reserva.module';
 
@@ -17,6 +18,6 @@ import { ReservaModule } from '../reserva/reserva.module';
     ReservaModule
   ],
   exports: [VehiculoListComponent],
-  declarations: [VehiculoListComponent, VehiculoDetailComponent],
+  declarations: [VehiculoListComponent, VehiculoDetailComponent, VehiculoFilterComponent],
 })
 export class VehiculoModule { }

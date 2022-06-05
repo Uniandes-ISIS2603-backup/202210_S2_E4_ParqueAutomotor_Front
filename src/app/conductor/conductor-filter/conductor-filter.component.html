@@ -26,31 +26,15 @@
       </div>
       <div *ngIf="mostrar_fecha" class="col">
         <div class="form-group">
-          <label for="exampleFormControlInput2">Fecha inicial</label>
-          <input
-            type="date"
-            class="form-control"
-            id="exampleFormControlInput2"
-            placeholder="Fecha"
-            (change)="sendNotification('fecha', $event)"
-          />
-          
-          <label for="exampleFormControlInput3">Fecha final</label>
+          <label for="exampleFormControlInput1">Fecha</label>
+
           <input
             type="date"
             class="form-control"
             id="exampleFormControlInput3"
             placeholder="Fecha"
-            (change)="sendNotification('fecha2', $event)"
-          />
+            (change)="sendNotification('fecha',$event)"
 
-          <label for="exampleFormControlInput4">Conductor</label>
-          <input
-            (change)="sendNotification('conductor', $event)"
-            class="form-control"
-            id="exampleFormControlInput4"
-            type="text"
-            placeholder="Default input"
           />
           <p>
             <button
@@ -70,7 +54,9 @@
               Restablecer
             </button>
           </p>
+
         </div>
+
       </div>
     </div>
   </div>

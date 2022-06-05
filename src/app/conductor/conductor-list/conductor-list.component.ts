@@ -6,7 +6,9 @@ import { ConductorServiceService } from '../conductor-service.service';
 @Component({
   selector: 'app-conductor-list',
   templateUrl: './conductor-list.component.html',
-  styleUrls: ['./conductor-list.component.css'],
+  styleUrls: ['./conductor-list.component.css']
+
+
 })
 export class ConductorListComponent implements OnInit {
   activate: Boolean = false;
@@ -16,23 +18,26 @@ export class ConductorListComponent implements OnInit {
   selected_Reserva: Boolean = false;
   selectedConductor!: ConductorDetail;
   selectedReserva!: Reserva;
+
   onSelected(Conductor: ConductorDetail): void {
     this.selected = true;
     this.selectedConductor = Conductor;
   }
 
-  constructor(private ConductorService: ConductorServiceService) {}
-  getNotification(evt: EventEmitter<any>): void {
-    let mensaje = evt as unknown as Array<any>;
 
-    if (mensaje[0] == 'fecha') {
-      this.selected = false;
-      this.filtrar_conductores_reservas_fecha(mensaje[1],mensaje[3],mensaje[2]);
+  constructor(private ConductorService:ConductorServiceService) {   }
+    getNotification(evt: EventEmitter<any>): void {
+    let mensaje=evt as unknown as Array<any>;
+
+    if(mensaje[0]=="fecha"){
+      this.selected=false;
+      this.filtrar_conductores_reservas_fecha(mensaje[1], mensaje[3], mensaje[2]);
     }
     if (mensaje[0] == 'Restablecer') {
       this.selected = false;
       this.getConductors();
     }
+
     if (mensaje[0] == 'mas_reservas') {
       this.selected = false;
       this.filtrar_conductores_reservas_mas_reservas();
@@ -54,11 +59,11 @@ export class ConductorListComponent implements OnInit {
       if (conductores[i].identificacion == conductor) {
         let reservas: Array<Reserva> = [];
         conductors = {...conductores[i]};
-        
+
         conductores_filtrados.push(conductors);
-        
+
         for (let j = 0; j < conductors.reservas.length; j++) {
-          if (conductors.reservas[j].fechaHoraReservada >= fecha && conductors.reservas[j].fechaHoraReservada <= fecha2) 
+          if (conductors.reservas[j].fechaHoraReservada >= fecha && conductors.reservas[j].fechaHoraReservada <= fecha2)
           {
             reservas.push(conductors.reservas[j]);
           }
@@ -68,7 +73,7 @@ export class ConductorListComponent implements OnInit {
         break;
       }
       this.conductores = conductores_filtrados;
-      
+
     }
   }
   getConductors(): void {
