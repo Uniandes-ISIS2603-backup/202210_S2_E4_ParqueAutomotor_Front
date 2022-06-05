@@ -31,7 +31,7 @@ export class ConductorListComponent implements OnInit {
 
     if(mensaje[0]=="fecha"){
       this.selected=false;
-      this.filtrar_conductores_reservas_fecha(mensaje[1]);
+      this.filtrar_conductores_reservas_fecha(mensaje[1], mensaje[3], mensaje[2]);
     }
     if (mensaje[0] == 'Restablecer') {
       this.selected = false;
