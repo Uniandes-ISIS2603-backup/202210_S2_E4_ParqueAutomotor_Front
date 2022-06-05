@@ -12,22 +12,34 @@
     </div>
     <div class="col">
       <dl>
+        <dt>Reservas</dt>
         <div
           class="scroll-container"
           style="overflow-y: auto; height: 100px; width: 80%"
         >
-        <dt>Reservas</dt>
         <dd class="caption" *ngFor="let reserva of vehiculoDetail.reservas">
-          {{ reserva.lugarDestino }}
+          <li
+              (click)="onSelectedReserva(reserva)"
+              class="list-group-item; list-group-item-action"
+            >
+              <a routerLink="/reservas/{{ reserva.id }}">
+                {{ reserva.fechaHoraReservada}}</a>
+            </li>
         </dd>
         </div>
+        <dt>Mantenimientos</dt>
         <div
           class="scroll-container"
           style="overflow-y: auto; height: 100px; width: 80%"
         >
-        <dt>Mantenimientos</dt>
         <dd class="caption" *ngFor="let mantenimiento of vehiculoDetail.mantenimientos">
-          {{ mantenimiento.fechaMantenimiento }}
+          <li
+              (click)="onSelectedMantenimiento(mantenimiento)"
+              class="list-group-item; list-group-item-action"
+            >
+              <a routerLink="/mantenimientos/{{ mantenimiento.id }}">
+                {{ mantenimiento.fechaMantenimiento}}</a>
+          </li>
         </dd>
         </div>
 
@@ -46,6 +58,20 @@
         <dd class="caption">{{ vehiculoDetail.capacidadPasajeros }}</dd>
         <hr />
       </dl>
+    </div>
+  </div>
+  <div [ngClass]="activate ? 'row' : 'd-none'" style="margin-top: 10px">
+    <div *ngIf="activate">
+      <div class="container border" style="margin-bottom: 10px">
+        <app-mantenimiento-detail [mantenimientoDetail]="mantenimiento"></app-mantenimiento-detail>
+      </div>
+    </div>
+  </div>
+  <div [ngClass]="activate ? 'row' : 'd-none'" style="margin-top: 10px">
+    <div *ngIf="activate">
+      <div class="container border" style="margin-bottom: 10px">
+        <app-reserva-detail [reservaDetail]="reserva"></app-reserva-detail>
+      </div>
     </div>
   </div>
 </div>
