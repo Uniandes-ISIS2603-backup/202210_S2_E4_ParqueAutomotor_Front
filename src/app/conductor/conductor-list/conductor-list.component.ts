@@ -28,9 +28,14 @@ export class ConductorListComponent implements OnInit {
   getNotification(evt: EventEmitter<any>): void {
     let mensaje=evt as unknown as Array<any>;
     if(mensaje[0]=="fecha"){
+      this.selected=false;
       this.filtrar_conductores_reservas_fecha(mensaje[1]);
     }
-    
+    if(mensaje[0]=="Restablecer")
+    {
+      this.selected=false;
+      this.getConductors();
+    }    
 
   }
   filtrar_conductores_reservas_fecha(fecha:Date){
@@ -55,7 +60,7 @@ export class ConductorListComponent implements OnInit {
       this.conductores = conductores;
     });
   }
-  
+
   hide: boolean = false;
   show: boolean = false;
 
