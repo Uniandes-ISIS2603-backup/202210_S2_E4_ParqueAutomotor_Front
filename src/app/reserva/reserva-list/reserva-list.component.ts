@@ -47,7 +47,7 @@ export class ReservaListComponent implements OnInit {
     if(mensaje[0] == "conductor")
     {
       this.selected = false;
-
+      this.filtrarReservaConductor(mensaje[1]);
     }
     if(mensaje[0]=="restablecer")
     {
@@ -80,11 +80,14 @@ export class ReservaListComponent implements OnInit {
     let reservas_filtradas : Array<Reserva> = [];
     for(let i=0;i < reservas.length; i++)
     {
+      console.log("llegue");
       if(reservas[i].conductor.id == idConductor )
       {
         reservas_filtradas.push(reservas[i]);
       }
     }
+
+    this.reservas = reservas_filtradas;
   }
   ngOnInit() {
     this.getReservas();
