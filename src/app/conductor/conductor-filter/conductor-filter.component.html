@@ -5,7 +5,7 @@
       <div class="btn-group">
         <input
           type="radio"
-          (click)="sendNotification('fecha',null)"
+          (click)="sendNotification('fecha', null)"
           class="btn-check"
           name="options"
           id="option1"
@@ -26,31 +26,57 @@
       </div>
       <div *ngIf="mostrar_fecha" class="col">
         <div class="form-group">
-          <label for="exampleFormControlInput1">Fecha</label>
-          
-          <input 
+          <label for="exampleFormControlInput2">Fecha inicial</label>
+          <input
             type="date"
             class="form-control"
-            id="exampleFormControlInput1"
+            id="exampleFormControlInput2"
             placeholder="Fecha"
-            (change)="sendNotification('fecha',$event)"
-            
+            (change)="sendNotification('fecha', $event)"
+          />
+          
+          <label for="exampleFormControlInput3">Fecha final</label>
+          <input
+            type="date"
+            class="form-control"
+            id="exampleFormControlInput3"
+            placeholder="Fecha"
+            (change)="sendNotification('fecha2', $event)"
+          />
+
+          <label for="exampleFormControlInput4">Conductor</label>
+          <input
+            (change)="sendNotification('conductor', $event)"
+            class="form-control"
+            id="exampleFormControlInput4"
+            type="text"
+            placeholder="Default input"
           />
           <p>
-            <button (click)="executeFilter('fecha')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;">Buscar</button>
-            <button (click)="executeFilter('Restablecer')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;margin-left: 10px;">Restablecer</button>
+            <button
+              (click)="executeFilter('fecha')"
+              type="submit"
+              class="btn btn-outline-dark"
+              style="margin-top: 10px"
+            >
+              Buscar
+            </button>
+            <button
+              (click)="executeFilter('Restablecer')"
+              type="submit"
+              class="btn btn-outline-dark"
+              style="margin-top: 10px; margin-left: 10px"
+            >
+              Restablecer
+            </button>
           </p>
-
-        </div> 
-        
+        </div>
       </div>
     </div>
-
   </div>
 </div>
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <input type="checkbox" class="btn-check" id="a" autocomplete="off" />
     <label
       class="btn btn-outline-dark"
       for="a"

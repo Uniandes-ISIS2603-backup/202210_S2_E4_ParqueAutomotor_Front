@@ -1,46 +1,45 @@
 <div class="container-fluid">
   <p class="h3 p-3">{{ vehiculoDetail.placa }}</p>
   <div class="row">
-    <div class="col-2">
-      <div class="thumb">
-        <img
-          class="img-fluid"
-          src="{{ vehiculoDetail.foto }}"
-          alt="{{ vehiculoDetail.placa }}"
-        />
-      </div>
-    </div>
+    
     <div class="col">
+      <img
+      class="img-fluid"
+      style="width: 400px; height: 200px; object-fit: cover"
+      src="{{ vehiculoDetail.foto }}"
+      alt="{{ vehiculoDetail.placa }}"
+    />
       <dl>
         <dt>Reservas</dt>
         <div
           class="scroll-container"
           style="overflow-y: auto; height: 100px; width: 80%"
         >
-        <dd class="caption" *ngFor="let reserva of vehiculoDetail.reservas">
-          <li
+          <dd class="caption" *ngFor="let reserva of vehiculoDetail.reservas">
+            <li
               (click)="onSelectedReserva(reserva)"
               class="list-group-item; list-group-item-action"
             >
-              <a routerLink="/reservas/{{ reserva.id }}">
-                {{ reserva.fechaHoraReservada}}</a>
+              {{ reserva.fechaHoraReservada}}
             </li>
-        </dd>
+          </dd>
         </div>
         <dt>Mantenimientos</dt>
         <div
           class="scroll-container"
           style="overflow-y: auto; height: 100px; width: 80%"
         >
-        <dd class="caption" *ngFor="let mantenimiento of vehiculoDetail.mantenimientos">
-          <li
+          <dd
+            class="caption"
+            *ngFor="let mantenimiento of vehiculoDetail.mantenimientos"
+          >
+            <li
               (click)="onSelectedMantenimiento(mantenimiento)"
               class="list-group-item; list-group-item-action"
             >
-              <a routerLink="/mantenimientos/{{ mantenimiento.id }}">
-                {{ mantenimiento.fechaMantenimiento}}</a>
-          </li>
-        </dd>
+              {{ mantenimiento.fechaMantenimiento}}
+            </li>
+          </dd>
         </div>
 
         <dt>Documentos</dt>
@@ -60,15 +59,17 @@
       </dl>
     </div>
   </div>
-  <div [ngClass]="activate ? 'row' : 'd-none'" style="margin-top: 10px">
-    <div *ngIf="activate">
+  <div [ngClass]="activateM ? 'row' : 'd-none'" style="margin-top: 10px">
+    <div *ngIf="activateM">
       <div class="container border" style="margin-bottom: 10px">
-        <app-mantenimiento-detail [mantenimientoDetail]="mantenimiento"></app-mantenimiento-detail>
+        <app-mantenimiento-detail
+          [mantenimientoDetail]="mantenimiento"
+        ></app-mantenimiento-detail>
       </div>
     </div>
   </div>
-  <div [ngClass]="activate ? 'row' : 'd-none'" style="margin-top: 10px">
-    <div *ngIf="activate">
+  <div [ngClass]="activateR ? 'row' : 'd-none'" style="margin-top: 10px">
+    <div *ngIf="activateR">
       <div class="container border" style="margin-bottom: 10px">
         <app-reserva-detail [reservaDetail]="reserva"></app-reserva-detail>
       </div>
