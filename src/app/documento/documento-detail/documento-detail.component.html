@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <p class="h3 p-3">Documento #{{ documentoDetail.id }}</p>
+  <div class="row">
+    <div class="col-md-12">
+    </div>
+    <div class="col">
+      <dl>
+        <dt>Fecha de expedicion</dt>
+        <dd>{{documentoDetail.fechaDeExpedicion}}</dd>
+        <dt>Fecha de Vencimiento:</dt>
+        <dd>{{ documentoDetail.fechaDeVencimiento}}</dd>
+        <hr/>
+        <dt class="bold">Comprobante: </dt>
+          <dd class="caption">{{ documentoDetail.fotografia }}</dd>
+        <hr />
+      </dl>
+    </div>
+  </div>
+</div>
