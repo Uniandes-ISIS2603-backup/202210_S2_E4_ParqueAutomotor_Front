@@ -8,6 +8,9 @@ import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 export class ReservaFilterComponent implements OnInit {
   @Output() notifyParent: EventEmitter<any> = new EventEmitter();
   mostrar_fecha: boolean = false;
+  mostrar_conductor: boolean = false;
+
+  conductor!: string;
   today!: Date;
   constructor() { }
 
@@ -18,9 +21,17 @@ export class ReservaFilterComponent implements OnInit {
 
     if (message == "fecha" && valor != null) {
       valor=(<HTMLTextAreaElement>valor.target).value
+      this.mostrar_conductor = false;
       this.mostrar_fecha = true;
       this.today = valor;
-      console.log("Entre a enviar el mensaje" + this.today);
+    }
+
+    if(message =="conductor" && valor == null)
+    {
+      valor=(<HTMLTextAreaElement>valor.target).value
+      this.mostrar_fecha = false;
+      this.mostrar_conductor = true;
+      this.conductor = valor;
     }
 
   }
@@ -32,6 +43,11 @@ export class ReservaFilterComponent implements OnInit {
 
     if( message == "restablecer") {
       this.notifyParent.emit([message]);
+    }
+
+    if(message == "")
+    {
+
     }
 
   }
