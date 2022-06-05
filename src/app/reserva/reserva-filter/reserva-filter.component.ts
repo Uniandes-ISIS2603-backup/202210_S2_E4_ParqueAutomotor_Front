@@ -10,12 +10,13 @@ export class ReservaFilterComponent implements OnInit {
   mostrar_fecha: boolean = false;
   mostrar_conductor: boolean = false;
 
-  conductor!: string;
+  conductor!: number;
   today!: Date;
   constructor() { }
 
   sendNotification(message: string,valor:any): void {
     if (message == "fecha" && valor == null) {
+      this.mostrar_conductor = false;
       this.mostrar_fecha = true;
     }
 
@@ -28,12 +29,17 @@ export class ReservaFilterComponent implements OnInit {
 
     if(message =="conductor" && valor == null)
     {
+      this.mostrar_fecha = false;
+      this.mostrar_conductor = true;
+    }
+
+    if(message =="conductor" && valor != null)
+    {
       valor=(<HTMLTextAreaElement>valor.target).value
       this.mostrar_fecha = false;
       this.mostrar_conductor = true;
       this.conductor = valor;
     }
-
   }
 
   executeFilter(message:string): void {
@@ -41,13 +47,13 @@ export class ReservaFilterComponent implements OnInit {
       this.notifyParent.emit([message,this.today]);
     }
 
-    if( message == "restablecer") {
-      this.notifyParent.emit([message]);
+    if(message == "conductor")
+    {
+      this.notifyParent.emit([message,this.conductor]);
     }
 
-    if(message == "")
-    {
-
+    if( message == "restablecer") {
+      this.notifyParent.emit([message]);
     }
 
   }

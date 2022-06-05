@@ -20,35 +20,39 @@
           name="options"
           id="option2"
           autocomplete="off"/>
-        <label class="btn btn-outline-dark" for="option2">Filtro por Conductor</label>
+        <label class="btn btn-outline-dark" for="option2">Filtro Conductor</label>
       </div>
         <div *ngIf="mostrar_fecha" class="col">
           <div class="form-group">
+
+            <label for="exampleFormControlInput1">Fecha:</label>
             <input
             type="date"
             class="form-control"
             id="exampleFormControlInput1"
             placeholder="Fecha"
             (change)="sendNotification('fecha',$event)"/>
-          <p>
-            <button (click)="executeFilter('fecha')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;">Buscar</button>
-            <button (click)="executeFilter('restablecer')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;margin-left: 10px;">Restablecer</button>
-          </p>
+            <p>
+              <button (click)="executeFilter('fecha')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;">Buscar</button>
+              <button (click)="executeFilter('restablecer')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;margin-left: 10px;">Restablecer</button>
+            </p>
           </div>
         </div>
 
         <div *ngIf="mostrar_conductor" class="col">
           <div class="form-group">
+
+            <label for="exampleFormControlInput1">Conductor:</label>
             <input
             type="text"
             class="form-control"
             id="exampleFormControlInput1"
-            placeholder="Filtro por Conductor"
+            placeholder="Filtro Conductor"
             (change)="sendNotification('conductor',$event)"/>
-          <p>
-            <button (click)="executeFilter('conductor')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;">Buscar</button>
-            <button (click)="executeFilter('restablecer')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;margin-left: 10px;">Restablecer</button>
-          </p>
+            <p>
+              <button (click)="executeFilter('conductor')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;">Buscar por coductor</button>
+              <button (click)="executeFilter('restablecer')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;margin-left: 10px;">Restablecer Filtro</button>
+            </p>
           </div>
         </div>
     </div>

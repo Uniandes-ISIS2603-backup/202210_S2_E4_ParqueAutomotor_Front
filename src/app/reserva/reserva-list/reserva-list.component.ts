@@ -43,11 +43,18 @@ export class ReservaListComponent implements OnInit {
       this.selected = false;
       this.filtrarReservaFecha(mensaje[1]);
     }
+
+    if(mensaje[0] == "conductor")
+    {
+      this.selected = false;
+
+    }
     if(mensaje[0]=="restablecer")
     {
       this.selected = false;
       this.getReservas();
     }
+
 
   }
 
@@ -65,6 +72,19 @@ export class ReservaListComponent implements OnInit {
     }
 
     this.reservas = reservas_filtradas;
+  }
+
+  filtrarReservaConductor(idConductor: number)
+  {
+    let reservas = this.reservas_copy;
+    let reservas_filtradas : Array<Reserva> = [];
+    for(let i=0;i < reservas.length; i++)
+    {
+      if(reservas[i].conductor.id == idConductor )
+      {
+        reservas_filtradas.push(reservas[i]);
+      }
+    }
   }
   ngOnInit() {
     this.getReservas();
