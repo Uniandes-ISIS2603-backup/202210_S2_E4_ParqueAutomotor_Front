@@ -28,13 +28,6 @@ describe('Service: Mantenimiento', () => {
     fixture = TestBed.createComponent(MantenimientoListComponent);
     component = fixture.componentInstance;
 
-    component.mantenimientos = [
-      new Mantenimiento(
-        faker.lorem.sentence(),
-        faker.lorem.sentence(),
-        faker.lorem.sentence()
-      ),
-    ];
     fixture.detectChanges();
     debug = fixture.debugElement;
   });
