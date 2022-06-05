@@ -1,9 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ReservaListComponent } from './reserva/reserva-list/reserva-list.component';
+import { Main_pageComponent } from './main_page/main_page.component';
 
-const routes: Routes = [
-];
+const routes: Routes = [{
+  path: 'main',
+  children: [
+    {
+      path: 'main_page',
+      component: Main_pageComponent
+    }
+  ]
+ }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

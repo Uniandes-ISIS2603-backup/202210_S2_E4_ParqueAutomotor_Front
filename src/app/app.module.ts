@@ -12,11 +12,13 @@ import { ConductorModule } from './conductor/conductor.module';
 import { VehiculoModule } from './vehiculo/vehiculo.module';
 import { ReservaModule } from './reserva/reserva.module';
 import { ComductorRoutingModule } from './conductor/ConductorRoutingModule';
+import { Main_pageComponent } from './main_page/main_page.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [	
+    AppComponent,
+      Main_pageComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
