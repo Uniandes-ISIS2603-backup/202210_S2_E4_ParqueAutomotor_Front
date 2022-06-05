@@ -7,6 +7,7 @@ import { ReservaRoutingModule } from './reserva-routing.routing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ReservaFilterComponent } from './reserva-filter/reserva-filter.component';
 import { EstudianteModule } from '../estudiante/estudiante.module';
+import { ProfesorModule } from '../profesor/profesor.module';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { EstudianteModule } from '../estudiante/estudiante.module';
     RouterModule,
     ReservaRoutingModule,
     ReactiveFormsModule,
-    EstudianteModule
+    EstudianteModule,
+    ProfesorModule
   ],
   declarations: [ReservaListComponent,ReservaDetailComponent,ReservaFilterComponent],
   exports:[ReservaListComponent,ReservaDetailComponent]

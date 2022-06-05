@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Conductor } from 'src/app/conductor/conductor';
+import { Profesor } from 'src/app/profesor/profesor';
 import { Reserva } from '../Reserva';
 import { ReservaService } from '../reserva.service';
 
@@ -11,6 +13,10 @@ import { ReservaService } from '../reserva.service';
 export class ReservaDetailComponent implements OnInit {
   reservaId!: string;
   @Input() reservaDetail!:Reserva
+  @Input() profesorSelected:boolean = false ;
+  profesor!:Profesor;
+
+
   constructor(
     private route: ActivatedRoute,
     private reservaService: ReservaService
@@ -20,6 +26,16 @@ export class ReservaDetailComponent implements OnInit {
       this.reservaDetail = Reserva;
     })
   }
+
+  selectedProfesor(profesor:Profesor):void{
+    this.profesor = profesor;
+    this.profesorSelected = true;
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    this.profesorSelected = false;
+  }
+
   ngOnInit() {
     if(this.reservaDetail === undefined){
       this.reservaId = this.route.snapshot.paramMap.get('id')!
