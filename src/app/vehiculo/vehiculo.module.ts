@@ -5,12 +5,16 @@ import { VehiculoDetailComponent } from './vehiculo-detail/vehiculo-detail.compo
 import { RouterModule } from '@angular/router';
 import { ReservaRoutingModule } from '../reserva/reserva-routing.routing';
 import { VehiculoRoutingModule } from './vehiculo-routing.module';
+import { MantenimientoModule } from '../mantenimiento/mantenimiento.module';
+import { ReservaModule } from '../reserva/reserva.module';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    VehiculoRoutingModule
+    VehiculoRoutingModule,
+    MantenimientoModule,
+    ReservaModule
   ],
   exports: [VehiculoListComponent],
   declarations: [VehiculoListComponent, VehiculoDetailComponent],
