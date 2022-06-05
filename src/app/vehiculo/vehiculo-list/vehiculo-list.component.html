@@ -1,4 +1,5 @@
 <div class="container-fluid">
+  <app-vehiculo-filter (notifyParent)="getNotification($event)"></app-vehiculo-filter>
   <div class="row">
     <div class="col ">
       <div class="row" style="overflow-y:auto; height: 480px;margin-top: 10px;">
@@ -10,7 +11,7 @@
               alt="{{ vehiculo.placa }}"
               (click)="onSelected(vehiculo)"
             />
-            
+
             <div class="card-body">
               <h5 class="card-title">{{ vehiculo.placa }}</h5>
               <p class="card-text">[{{ vehiculo.tipo }}]</p>

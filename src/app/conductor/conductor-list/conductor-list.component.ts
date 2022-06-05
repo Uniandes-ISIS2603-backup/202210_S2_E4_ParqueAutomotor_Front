@@ -7,7 +7,7 @@ import { ConductorServiceService } from '../conductor-service.service';
   selector: 'app-conductor-list',
   templateUrl: './conductor-list.component.html',
   styleUrls: ['./conductor-list.component.css']
-        
+
 
 })
 export class ConductorListComponent implements OnInit {
@@ -19,6 +19,7 @@ export class ConductorListComponent implements OnInit {
   selected_Reserva:Boolean = false;
   selectedConductor!: ConductorDetail;
   selectedReserva!: Reserva;
+
   onSelected(Conductor: ConductorDetail): void {
     this.selected = true;
     this.selectedConductor = Conductor;
@@ -26,9 +27,9 @@ export class ConductorListComponent implements OnInit {
 
 
   constructor(private ConductorService:ConductorServiceService) {   }
-  getNotification(evt: EventEmitter<any>): void {
+    getNotification(evt: EventEmitter<any>): void {
     let mensaje=evt as unknown as Array<any>;
-    
+
     if(mensaje[0]=="fecha"){
       this.selected=false;
       this.filtrar_conductores_reservas_fecha(mensaje[1]);
@@ -37,7 +38,7 @@ export class ConductorListComponent implements OnInit {
     {
       this.selected=false;
       this.getConductors();
-    } 
+    }
     if(mensaje[0]=="mas_reservas"){
       this.selected=false;
       this.filtrar_conductores_reservas_mas_reservas();

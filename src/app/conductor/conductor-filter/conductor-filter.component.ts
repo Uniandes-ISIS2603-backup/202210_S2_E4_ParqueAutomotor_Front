@@ -7,6 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 })
 export class ConductorFilterComponent implements OnInit {
+
   @Output() notifyParent: EventEmitter<any> = new EventEmitter();
   today!: Date;
   cantidad!: number;
@@ -32,6 +33,7 @@ export class ConductorFilterComponent implements OnInit {
         this.mostrar_fecha = false;
       }
   }
+
   executeFilter(message:string): void {
     if( message == "fecha") {
       this.notifyParent.emit([message,this.today]);

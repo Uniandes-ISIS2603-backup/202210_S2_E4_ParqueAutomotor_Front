@@ -27,22 +27,22 @@
       <div *ngIf="mostrar_fecha" class="col">
         <div class="form-group">
           <label for="exampleFormControlInput1">Fecha</label>
-          
-          <input 
+
+          <input
             type="date"
             class="form-control"
             id="exampleFormControlInput1"
             placeholder="Fecha"
             (change)="sendNotification('fecha',$event)"
-            
+
           />
           <p>
             <button (click)="executeFilter('fecha')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;">Buscar</button>
             <button (click)="executeFilter('Restablecer')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;margin-left: 10px;">Restablecer</button>
           </p>
 
-        </div> 
-        
+        </div>
+
       </div>
     </div>
 
