@@ -5,7 +5,7 @@
       <div class="btn-group">
         <input
           type="radio"
-          (click)="sendNotification('fecha',null)"
+          (click)="sendNotification('fecha', null)"
           class="btn-check"
           name="options"
           id="option1"
@@ -31,26 +31,38 @@
           <input
             type="date"
             class="form-control"
-            id="exampleFormControlInput1"
+            id="exampleFormControlInput3"
             placeholder="Fecha"
             (change)="sendNotification('fecha',$event)"
 
           />
           <p>
-            <button (click)="executeFilter('fecha')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;">Buscar</button>
-            <button (click)="executeFilter('Restablecer')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;margin-left: 10px;">Restablecer</button>
+            <button
+              (click)="executeFilter('fecha')"
+              type="submit"
+              class="btn btn-outline-dark"
+              style="margin-top: 10px"
+            >
+              Buscar
+            </button>
+            <button
+              (click)="executeFilter('Restablecer')"
+              type="submit"
+              class="btn btn-outline-dark"
+              style="margin-top: 10px; margin-left: 10px"
+            >
+              Restablecer
+            </button>
           </p>
 
         </div>
 
       </div>
     </div>
-
   </div>
 </div>
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <input type="checkbox" class="btn-check" id="a" autocomplete="off" />
     <label
       class="btn btn-outline-dark"
       for="a"

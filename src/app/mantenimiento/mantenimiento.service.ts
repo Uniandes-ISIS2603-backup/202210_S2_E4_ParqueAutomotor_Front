@@ -13,6 +13,10 @@ export class MantenimientoService {
 
   constructor(private http: HttpClient) { }
 
+  getMantenimiento(id: string): Observable<Mantenimiento> {
+    return this.http.get<Mantenimiento>(this.apiUrl + "/" + id);
+  }
+
   getMantenimientos(): Observable<Mantenimiento[]>{
   return this.http.get<Mantenimiento[]>(this.apiUrl);
   }

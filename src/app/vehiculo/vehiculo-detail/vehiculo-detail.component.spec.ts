@@ -28,6 +28,7 @@ describe('VehiculoDetailComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(VehiculoDetailComponent);
     component = fixture.componentInstance;
+ 
     component.vehiculoDetail =
       new VehiculoDetail(
         faker.datatype.number(),
@@ -38,44 +39,73 @@ describe('VehiculoDetailComponent', () => {
         faker.lorem.sentence(),
         faker.datatype.number(),
 
-    [new Reserva(
-      faker.datatype.number(),
-      faker.datatype.boolean(),
-      faker.datatype.datetime,
-      faker.datatype.datetime,
-      faker.datatype.string(),
-      faker.datatype.string(),
-      new Profesor(faker.datatype.number(),
-        faker.datatype.string(),
-        faker.datatype.string(),
-        faker.datatype.string(),
-        faker.image.imageUrl()),
-      new Vehiculo(faker.datatype.number(),
-        faker.image.imageUrl(),
-        faker.datatype.string(),
-        faker.datatype.string(),
-        faker.datatype.string(),
-        faker.datatype.string(),
-        faker.datatype.number()
-      ),
-      new Conductor(faker.datatype.number(),
-        faker.image.imageUrl(),
-        faker.datatype.string(),
-        faker.datatype.string())
-    )],
+    [
+      new Reserva(
+        faker.datatype.number(),
+        faker.datatype.boolean(),
+        faker.date.past(),
+        faker.date.past(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        new Profesor( 
+          faker.datatype.number(),
+          faker.name.firstName(),
+          faker.phone.phoneNumber(),
+          faker.internet.email(),
+          faker.image.imageUrl()
+        ),
+        new Vehiculo(
+          faker.datatype.number(),
+          faker.image.imageUrl(),
+          faker.lorem.sentence(),
+          faker.lorem.sentence(),
+          faker.lorem.sentence(),
+          faker.lorem.sentence(),
+          faker.datatype.number()
+        ),
+        new Conductor(
+          faker.datatype.number(),
+          faker.image.imageUrl(),
+          faker.name.firstName(),
+          faker.phone.phoneNumber()
+        )
+      )]
+    ,
+    [
+      new Mantenimiento(
+        faker.datatype.number(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.date.past(),
+        new Vehiculo(
+          faker.datatype.number(),
+          faker.image.imageUrl(),
+          faker.lorem.sentence(),
+          faker.lorem.sentence(),
+          faker.lorem.sentence(),
+          faker.lorem.sentence(),
+          faker.datatype.number()
+        )
+      )
+        ],
+        [ new Documento(
+          faker.datatype.number(),
+          faker.lorem.sentence(),
+          faker.image.imageUrl(),
+          faker.date.past(),
+          faker.date.past(),
+          new Vehiculo(
+            faker.datatype.number(),
+            faker.image.imageUrl(),
+            faker.lorem.sentence(),
+            faker.lorem.sentence(),
+            faker.lorem.sentence(),
+            faker.lorem.sentence(),
+            faker.datatype.number()
+          )
+        )
+        ]
 
-    [new Mantenimiento(
-      faker.datatype.string(),
-      faker.datatype.string(),
-      faker.datatype.datetime,
-    )],
-
-    [new Documento(
-      faker.datatype.string(),
-      faker.datatype.string(),
-      faker.datatype.datetime,
-      faker.datatype.datetime,
-    )],
       );
 
     debugElement = fixture.debugElement;

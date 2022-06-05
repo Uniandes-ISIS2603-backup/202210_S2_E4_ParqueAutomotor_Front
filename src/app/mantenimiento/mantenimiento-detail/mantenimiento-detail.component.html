@@ -1,0 +1,21 @@
+
+<div class="container-fluid">
+  <p class="h3 p-3">Mantenimiento #{{ mantenimientoDetail.id }}</p>
+  <div class="row">
+    <div class="col-md-12">
+    </div>
+    <div class="col">
+      <dl>
+        <dt>Taller</dt>
+        <dd>{{mantenimientoDetail.nombreTaller}}</dd>
+        <dt>Fecha Realización:</dt>
+        <dd>{{ mantenimientoDetail.fechaMantenimiento}}</dd>
+        <hr/>
+        <dt class="bold">Descripcion </dt>
+          <dd class="caption">{{ mantenimientoDetail.descripcionMantenimiento }}</dd>
+        <hr />
+      </dl>
+    </div>
+  </div>
+</div>
+

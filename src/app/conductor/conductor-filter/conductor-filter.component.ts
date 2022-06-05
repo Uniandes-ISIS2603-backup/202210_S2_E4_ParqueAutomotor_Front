@@ -10,7 +10,8 @@ export class ConductorFilterComponent implements OnInit {
 
   @Output() notifyParent: EventEmitter<any> = new EventEmitter();
   today!: Date;
-  cantidad!: number;
+  fecha_fin!: Date;
+  conductor!: string;
   mostrar_fecha: boolean = false;
   mostrar_mas_reservas: boolean = false;
 
@@ -19,6 +20,15 @@ export class ConductorFilterComponent implements OnInit {
         valor=(<HTMLTextAreaElement>valor.target).value
         this.today=valor;
         this.mostrar_mas_reservas = false;
+      }
+      if(message == "fecha2" && valor != null) {
+        valor=(<HTMLTextAreaElement>valor.target).value
+        this.fecha_fin=valor;
+        this.mostrar_mas_reservas = false;
+      }
+
+      if(message == "conductor") {
+        this.conductor = (<HTMLTextAreaElement>valor.target).value;
       }
       if (message == "fecha" && valor == null) {
         this.mostrar_fecha = true;
@@ -36,7 +46,7 @@ export class ConductorFilterComponent implements OnInit {
 
   executeFilter(message:string): void {
     if( message == "fecha") {
-      this.notifyParent.emit([message,this.today]);
+      this.notifyParent.emit([message,this.today,this.conductor,this.fecha_fin]);
     }
 
     if (message == "mas_reservas" || message=='Restablecer') {
