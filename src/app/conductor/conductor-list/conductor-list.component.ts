@@ -14,6 +14,7 @@ export class ConductorListComponent implements OnInit {
 
   activate:Boolean =false;
   conductores: Array<ConductorDetail>=[];
+  conductores_copy:Array<ConductorDetail>=[];
   selected: Boolean = false;
   selected_Reserva:Boolean = false;
   selectedConductor!: ConductorDetail;
@@ -27,6 +28,7 @@ export class ConductorListComponent implements OnInit {
   constructor(private ConductorService:ConductorServiceService) {   }
   getNotification(evt: EventEmitter<any>): void {
     let mensaje=evt as unknown as Array<any>;
+    
     if(mensaje[0]=="fecha"){
       this.selected=false;
       this.filtrar_conductores_reservas_fecha(mensaje[1]);
@@ -35,11 +37,20 @@ export class ConductorListComponent implements OnInit {
     {
       this.selected=false;
       this.getConductors();
-    }    
+    } 
+    if(mensaje[0]=="mas_reservas"){
+      this.selected=false;
+      this.filtrar_conductores_reservas_mas_reservas();
+    }
 
   }
+  filtrar_conductores_reservas_mas_reservas(){
+    this.conductores.sort((a,b)=>{
+      return b.reservas.length-a.reservas.length;
+    });
+  }
   filtrar_conductores_reservas_fecha(fecha:Date){
-    let conductores=this.conductores;
+    let conductores=this.conductores_copy;
     let conductores_filtrados:Array<ConductorDetail>=[];
     for( let i=0; i<conductores.length;i++){
       let cantidad=0;
@@ -58,6 +69,7 @@ export class ConductorListComponent implements OnInit {
   getConductors(): void {
     this.ConductorService.getConductores().subscribe((conductores) => {
       this.conductores = conductores;
+      this.conductores_copy=conductores;
     });
   }
 
@@ -68,5 +80,4 @@ export class ConductorListComponent implements OnInit {
   ngOnInit() {
     this.getConductors();
   }
-
 }
