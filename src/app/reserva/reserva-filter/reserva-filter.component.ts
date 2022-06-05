@@ -9,20 +9,25 @@ export class ReservaFilterComponent implements OnInit {
   @Output() notifyParent: EventEmitter<any> = new EventEmitter();
   mostrar_fecha: boolean = false;
   mostrar_conductor: boolean = false;
+  mostrar_estudiante: boolean = false;
 
   conductor!: number;
+  estudiante!: number;
   today!: Date;
+
   constructor() { }
 
   sendNotification(message: string,valor:any): void {
     if (message == "fecha" && valor == null) {
       this.mostrar_conductor = false;
+      this.mostrar_estudiante = false;
       this.mostrar_fecha = true;
     }
 
     if (message == "fecha" && valor != null) {
       valor=(<HTMLTextAreaElement>valor.target).value
       this.mostrar_conductor = false;
+      this.mostrar_estudiante = false;
       this.mostrar_fecha = true;
       this.today = valor;
     }
@@ -30,6 +35,7 @@ export class ReservaFilterComponent implements OnInit {
     if(message =="conductor" && valor == null)
     {
       this.mostrar_fecha = false;
+      this.mostrar_estudiante = false;
       this.mostrar_conductor = true;
     }
 
@@ -37,8 +43,25 @@ export class ReservaFilterComponent implements OnInit {
     {
       valor=(<HTMLTextAreaElement>valor.target).value
       this.mostrar_fecha = false;
+      this.mostrar_estudiante = false;
       this.mostrar_conductor = true;
       this.conductor = valor;
+    }
+
+    if(message =="estudiante" && valor == null)
+    {
+      this.mostrar_fecha = false;
+      this.mostrar_conductor = false;
+      this.mostrar_estudiante = true;
+    }
+
+    if(message =="estudiante" && valor != null)
+    {
+      valor=(<HTMLTextAreaElement>valor.target).value
+      this.mostrar_fecha = false;
+      this.mostrar_conductor = false;
+      this.mostrar_estudiante = true;
+      this.estudiante=valor;
     }
   }
 
@@ -50,6 +73,11 @@ export class ReservaFilterComponent implements OnInit {
     if(message == "conductor")
     {
       this.notifyParent.emit([message,this.conductor]);
+    }
+
+    if(message == "estudiante")
+    {
+      this.notifyParent.emit([message,this.estudiante]);
     }
 
     if( message == "restablecer") {

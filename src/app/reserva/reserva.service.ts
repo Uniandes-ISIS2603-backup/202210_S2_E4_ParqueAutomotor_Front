@@ -11,7 +11,7 @@ import { Estudiante } from '../estudiante/estudiante';
 })
 export class ReservaService {
 private apiUrl: string = environment.baseUrl + '/reservas';
-private apiUrlEstudiantes: string = environment.baseUrl;
+private apiUrlEstudiantes: string = environment.baseUrl + '/estudiantes';
 constructor(private http: HttpClient) { }
 
 

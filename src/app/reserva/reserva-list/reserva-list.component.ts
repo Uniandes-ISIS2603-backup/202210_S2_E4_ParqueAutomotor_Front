@@ -49,6 +49,13 @@ export class ReservaListComponent implements OnInit {
       this.selected = false;
       this.filtrarReservaConductor(mensaje[1]);
     }
+
+    if(mensaje[0] == "estudiante")
+    {
+      this.selected = false;
+      this.filtrarReservasEstudiante(mensaje[1]);
+    }
+
     if(mensaje[0]=="restablecer")
     {
       this.selected = false;
@@ -88,6 +95,26 @@ export class ReservaListComponent implements OnInit {
     }
 
     this.reservas = reservas_filtradas;
+  }
+
+  filtrarReservasEstudiante(idEstudiante:number){
+    let reservas = this.reservas_copy;
+    let reservas_filtradas : Array<Reserva> = [];
+    let x = idEstudiante as unknown as string;
+    let centinela: boolean = false;
+    this.getReservasEstudiantes(x);
+
+    for(let i = 0; i < this.reservasEstudiante.length; i ++)
+    {
+      for(let j=0;j < reservas.length && !centinela; j++)
+      {
+        if(this.reservasEstudiante[i].id == reservas[i].id)
+        {
+          reservas_filtradas.push(reservas[i]);
+        }
+      }
+    }
+
   }
   ngOnInit() {
     this.getReservas();
