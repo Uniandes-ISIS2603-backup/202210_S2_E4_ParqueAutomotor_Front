@@ -11,7 +11,8 @@ import { VehiculoDetail } from '../vehiculo-detail';
 export class VehiculoDetailComponent implements OnInit {
 
   @Input() vehiculoDetail!: VehiculoDetail;
-  @Input() activate: boolean=true;
+  @Input() activateR: boolean=false;
+  @Input() activateM: boolean=false;
 
   activeStatus: boolean = true;
   esconder:boolean = false;
@@ -19,15 +20,18 @@ export class VehiculoDetailComponent implements OnInit {
   reserva!: Reserva;
 
   onSelectedReserva(reserva: Reserva): void {
-    this.activate = true;
+    this.activateR = true;
+    this.activateM = false;
     this.reserva = reserva;
   }
   onSelectedMantenimiento(mantenimiento: Mantenimiento): void {
-    this.activate = true;
+    this.activateM = true;
+    this.activateR = false;
     this.mantenimiento = mantenimiento;
   }
   ngOnChanges(changes: SimpleChanges) {
-    this.activate = false;
+    this.activateR = false;
+    this.activateM = false;
   }
 
   ngOnInit() {
