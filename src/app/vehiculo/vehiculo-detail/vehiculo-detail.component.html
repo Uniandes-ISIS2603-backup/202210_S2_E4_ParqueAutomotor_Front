@@ -12,15 +12,24 @@
     </div>
     <div class="col">
       <dl>
+        <div
+          class="scroll-container"
+          style="overflow-y: auto; height: 100px; width: 80%"
+        >
         <dt>Reservas</dt>
         <dd class="caption" *ngFor="let reserva of vehiculoDetail.reservas">
           {{ reserva.lugarDestino }}
         </dd>
-
+        </div>
+        <div
+          class="scroll-container"
+          style="overflow-y: auto; height: 100px; width: 80%"
+        >
         <dt>Mantenimientos</dt>
         <dd class="caption" *ngFor="let mantenimiento of vehiculoDetail.mantenimientos">
           {{ mantenimiento.fechaMantenimiento }}
         </dd>
+        </div>
 
         <dt>Documentos</dt>
         <dd class="caption" *ngFor="let documento of vehiculoDetail.documentos">
