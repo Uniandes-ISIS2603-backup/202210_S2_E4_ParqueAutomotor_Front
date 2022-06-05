@@ -5,15 +5,18 @@ import { ReservaDetailComponent } from './reserva-detail/reserva-detail.componen
 import { RouterModule } from '@angular/router';
 import { ReservaRoutingModule } from './reserva-routing.routing';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ReservaFilterComponent } from './reserva-filter/reserva-filter.component';
+import { EstudianteModule } from '../estudiante/estudiante.module';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     ReservaRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    EstudianteModule
   ],
-  declarations: [ReservaListComponent,ReservaDetailComponent],
+  declarations: [ReservaListComponent,ReservaDetailComponent,ReservaFilterComponent],
   exports:[ReservaListComponent,ReservaDetailComponent]
 })
 export class ReservaModule {}
