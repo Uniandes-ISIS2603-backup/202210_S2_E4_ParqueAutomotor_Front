@@ -63,6 +63,14 @@ export class ReservaListComponent implements OnInit {
     }
 
 
+    if(mensaje[0]=="vehiculo")
+    {
+      this.selected = false;
+      this.filtrarReservaVehiculo(mensaje[1]);
+
+    }
+
+
   }
 
   filtrarReservaFecha(fecha:Date){
@@ -89,6 +97,21 @@ export class ReservaListComponent implements OnInit {
     {
       console.log("llegue");
       if(reservas[i].conductor.id == idConductor )
+      {
+        reservas_filtradas.push(reservas[i]);
+      }
+    }
+
+    this.reservas = reservas_filtradas;
+  }
+
+  filtrarReservaVehiculo(placaVehiculo: string)
+  {
+    let reservas = this.reservas_copy;
+    let reservas_filtradas : Array<Reserva> = [];
+    for(let i=0;i < reservas.length; i++)
+    {
+      if(reservas[i].vehiculo.placa == placaVehiculo )
       {
         reservas_filtradas.push(reservas[i]);
       }

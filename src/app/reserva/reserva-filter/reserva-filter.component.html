@@ -30,6 +30,17 @@
         id="option3"
         autocomplete="off"/>
       <label class="btn btn-outline-dark" for="option3">Filtro Estudiante</label>
+
+      <input
+      type="radio"
+      (click)="sendNotification('vehiculo',null)"
+      class="btn-check"
+      name="options"
+      id="option4"
+      autocomplete="off"/>
+      <label class="btn btn-outline-dark" for="option4">Filtro Vehículo</label>
+
+
       </div>
         <div *ngIf="mostrar_fecha" class="col">
           <div class="form-group">
@@ -74,7 +85,7 @@
             class="form-control"
             id="exampleFormControlInput1"
             placeholder="Id Estudiante"
-            (change)="sendNotification('conductor',$event)"/>
+            (change)="sendNotification('estudiante',$event)"/>
             <p>
               <button (click)="executeFilter('estudiante')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;">Buscar por estudiante</button>
               <button (click)="executeFilter('restablecer')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;margin-left: 10px;">Restablecer Filtro</button>
@@ -82,9 +93,26 @@
           </div>
         </div>
 
+        <div *ngIf="mostrar_vehiculo" class="col">
+          <div class="form-group">
+
+            <label for="exampleFormControlInput1">Vehículo:</label>
+            <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Placa Vehículo"
+            (change)="sendNotification('vehiculo',$event)"/>
+            <p>
+              <button (click)="executeFilter('vehiculo')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;">Buscar por estudiante</button>
+              <button (click)="executeFilter('restablecer')" type="submit"   class="btn btn-outline-dark" style="margin-top: 10px;margin-left: 10px;">Restablecer Filtro</button>
+            </p>
+          </div>
+        </div>
 
 
     </div>
+
   </div>
 </div>
 
