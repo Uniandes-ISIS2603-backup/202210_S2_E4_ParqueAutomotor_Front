@@ -26,7 +26,11 @@ export class ReservaListComponent implements OnInit {
        this.reservas_copy = reservas;
      })
    }
-
+   getReservasEstudiantes(id:string):void{
+      this.reservaService.getEstudiantes(id).subscribe(reservasEstudiante =>{
+        this.reservasEstudiante = reservasEstudiante;
+      })
+   }
   onSelectedReserva(reserva:Reserva):void{
     this.selected =true;
     this.selectedReserva = reserva;

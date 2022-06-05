@@ -21,8 +21,8 @@ getReservas(): Observable<Reserva[]>{
 getReserva(id: string): Observable<ReservaDetail> {
   return this.http.get<ReservaDetail>(this.apiUrl + "/" + id);
 }
-getEstudiantes(id: string):Observable<ReservaDetail>{
-  return this.http.get<ReservaDetail>(this.apiUrlEstudiantes+ "/" +id + "reservas" );
+getEstudiantes(id: string):Observable<ReservaDetail[]>{
+  return this.http.get<ReservaDetail[]>(this.apiUrlEstudiantes+ "/" +id + "/reservas" );
 }
 
 }
