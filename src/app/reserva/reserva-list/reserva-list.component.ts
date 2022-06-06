@@ -51,7 +51,6 @@ export class ReservaListComponent implements OnInit {
 
     if(mensaje[0] == "estudiante")
     {
-      console.log("Entro a listar estudiante")
       this.selected = false;
       this.filtrarReservasEstudiante(mensaje[1]);
     }

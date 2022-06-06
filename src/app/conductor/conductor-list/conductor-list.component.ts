@@ -31,7 +31,7 @@ export class ConductorListComponent implements OnInit {
 
     if(mensaje[0]=="fecha"){
       this.selected=false;
-      this.filtrar_conductores_reservas_fecha(mensaje[1], mensaje[3], mensaje[2]);
+      this.filtrar_conductores_reservas_fecha(mensaje[1]);
     }
     if (mensaje[0] == 'Restablecer') {
       this.selected = false;
@@ -51,30 +51,25 @@ export class ConductorListComponent implements OnInit {
     console.log(this.conductores)
 
   }
-  filtrar_conductores_reservas_fecha(fecha: Date,fecha2:Date, conductor: string) {
+  filtrar_conductores_reservas_fecha(fecha: Date) {
     let conductores = this.conductores_copy;
     let conductores_filtrados: Array<ConductorDetail> = [];
     let conductors: ConductorDetail;
+
     for (let i = 0; i < conductores.length; i++) {
-      if (conductores[i].identificacion == conductor) {
-        let reservas: Array<Reserva> = [];
-        conductors = {...conductores[i]};
+      let reservas = conductores[i].reservas
 
-        conductores_filtrados.push(conductors);
-
-        for (let j = 0; j < conductors.reservas.length; j++) {
-          if (conductors.reservas[j].fechaHoraReservada >= fecha && conductors.reservas[j].fechaHoraReservada <= fecha2)
+        for (let j = 0; j < reservas.length; j++) {
+          if (reservas[j].fechaHoraEfectuada == fecha)
           {
-            reservas.push(conductors.reservas[j]);
+            conductores_filtrados.push(conductores[i]);
+            break;
           }
         }
-        conductors.reservas = reservas;
-        this.onSelected(conductors);
-        break;
-      }
-      this.conductores = conductores_filtrados;
-
     }
+
+    this.conductores = conductores_filtrados;
+
   }
   getConductors(): void {
     this.ConductorService.getConductores().subscribe((conductores) => {
