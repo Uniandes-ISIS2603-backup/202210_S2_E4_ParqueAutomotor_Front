@@ -28,13 +28,12 @@ export class ReservaListComponent implements OnInit {
    }
    getReservasEstudiantes(id:string):void{
       this.reservaService.getEstudiantes(id).subscribe(reservasEstudiante =>{
-        this.reservasEstudiante = reservasEstudiante;
+        this.reservas = reservasEstudiante;
       })
    }
   onSelectedReserva(reserva:Reserva):void{
     this.selected =true;
     this.selectedReserva = reserva;
-    console.log("Entrando a reserva ;)")
   }
 
   getNotification(evt: EventEmitter<any>):void{
@@ -52,6 +51,7 @@ export class ReservaListComponent implements OnInit {
 
     if(mensaje[0] == "estudiante")
     {
+      console.log("Entro a listar estudiante")
       this.selected = false;
       this.filtrarReservasEstudiante(mensaje[1]);
     }
@@ -121,23 +121,8 @@ export class ReservaListComponent implements OnInit {
   }
 
   filtrarReservasEstudiante(idEstudiante:number){
-    let reservas = this.reservas_copy;
-    let reservas_filtradas : Array<Reserva> = [];
     let x = idEstudiante as unknown as string;
-    let centinela: boolean = false;
     this.getReservasEstudiantes(x);
-
-    for(let i = 0; i < this.reservasEstudiante.length; i ++)
-    {
-      for(let j=0;j < reservas.length && !centinela; j++)
-      {
-        if(this.reservasEstudiante[i].id == reservas[i].id)
-        {
-          reservas_filtradas.push(reservas[i]);
-        }
-      }
-    }
-
   }
   ngOnInit() {
     this.getReservas();
